@@ -7,12 +7,12 @@
 .breadcrumb li {
     display: inline;
     font-size: 16px;
-    color: var(--azul-claro);
+    color: var(--verde);
 }
 
 .breadcrumb li+li:before {
     padding: 8px;
-    color: var(--azul-claro);
+    color: var(--verde);
     content: ">";
 }
 
@@ -43,7 +43,7 @@
 
 .campo__escrita {
     display: block;
-    border: 2px solid var(--azul-claro);
+    border: 2px solid var(--verde);
     border-radius: 20px;
     width: 100%;
     padding: 1em;

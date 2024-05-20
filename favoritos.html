@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos Cia.</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="cabeçalho">
+        		
+		<div class="container">
+            <div class="hamburger" onclick="toggleSidebar(this)">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <div id="sidebar"class="sidebar">
+        <h2></h2><br>
+        <ul class="list">
+            <li onclick="SidebarSelection(this)" class="list-item">Presentes</li>
+            <li onclick="SidebarSelection(this)" class="list-item">Perfumaria</li>
+            <li onclick="SidebarSelection(this)" class="list-item">Corpo e Banho</li>
+            <li onclick="SidebarSelection(this)" class="list-item">Make</li>
+            <li onclick="SidebarSelection(this)" class="list-item">Cabelos</li>
+        </ul>
+    </div>
+    
+    
+           <a href="index.html"><img src="img/logo.jpeg"  class="container__imagem" title="Cosméticos $ Cia"></a>
+			<div class="titulo__alinhado" >
+            <a href="index.html" class="container__link" title="Cosméticos $ Cia"><h1 class="container__titulo"><b class="container__titulo--negrito">Cosméticos</b> & Cia</h1></a>
+         </div>
+		</div>
+   
+       <!-- pesquisa -->
+		<div class="pesquisa__area">
+		<input type="search" class="header__pesquisa" placeholder="O que você procura hoje?"></ul>
+	    </div>
+		<div class="container">
+            <a href="favoritos.html"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente" title="Favoritos"></a>
+            <a href="#" class="container__link"><img src="img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras"><p class="container__texto">Minha sacola</p></a>
+            <a href="perfil.html"class="container__link"><img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem" title="Meu Perfil"><p class="container__texto">Meu perfil</p></a>
+        </div>
+    </header>
+	
+	<!-- começa o banner -->
+	
+	<section class="banner">
+				<input type="search" class="header__pesquisa2" placeholder="O que você procura hoje?"></ul>
+			<div class="dropdown">
+			  
+		<a href="#" class="link__banner">Presentes</a>&emsp;
+		<a href="#" class="link__banner">Perfumaria</a>&emsp;
+		<a href="#" class="link__banner">Corpo e Banho</a>&emsp;
+		<a href="#" class="link__banner">Make</a>&emsp;
+		<a href="#" class="link__banner">Cabelos</a>&emsp;
+		<a href="favoritos.html" class="link__banner">Meus Favoritos</a>&emsp;
+		
+	</div>
+	</section>
+   
+    
+Favoritos
+   
+
+    <hr/>
+
+    <footer class="rodapé">
+		<h2><a  class="rodapé__titulo" href="http://mhps.com.br/" target="_blank" title="Desenvolvido por MHPS">Desenvolvido por MHPS</a></h2><br>
+        <ul class="lista-rodapé">
+            <li class="lista-rodapé__titulo">DÚVIDAS</li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Perguntas Frequentes</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Formas de Pagamento</a>
+            </li>
+			<li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Frete e Entrega</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Mapa do Site</a>
+            </li>
+        </ul>
+
+        <ul class="lista-rodapé">
+            <li class="lista-rodapé__titulo">INSTITUCIONAL</li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Nossa História</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Trabalhe Conosco</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Seja um revendedor</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Onde comprar</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Blog</a>
+            </li>
+            
+        </ul>
+
+        <ul class="lista-rodapé">
+            <li class="lista-rodapé__titulo">LINKS ÚTEIS</li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Política de Privacidade</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Proteja-se Contra Fraudes</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Preferências de Cookies</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="https://www.planalto.gov.br/ccivil_03/leis/l8078.htm" class="lista-rodapé__link">Código de Defesa do Consumidor</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Termos de Uso</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Alerta Sobre Segurança</a>
+            </li>
+            <li class="lista-rodapé__item">
+                <a href="#" class="lista-rodapé__link">Regulamento de Compras</a>
+            </li>
+        </ul>
+    </footer>
+
+<script src="js/apps.js"></script>
+  
+</body>
+
+</html>

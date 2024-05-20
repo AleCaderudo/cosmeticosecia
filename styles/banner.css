@@ -1,0 +1,40 @@
+
+.dropdown {
+    display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	
+ .banner {
+	background-color: var(--verde);
+	text-align: center;	
+	padding: 1.5em 2em; 
+}
+	.link__banner {
+        
+	    color: var(--preto);
+		font-size: 20px;
+		text-decoration: none;
+    }
+	
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+}
+	
+@media screen and (min-width: 1728px) {
+	
+		.banner {
+			text-align: center;
+		
+	}
+		.opções {
+			text-align: center;
+	}
+}
+	
+	
+	

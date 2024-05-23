@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles.css">
 </head>
 
@@ -42,10 +46,14 @@
 		</div>
    
        <!-- pesquisa -->
-		<div class="pesquisa__area">
-		<input type="search" class="header__pesquisa" placeholder="O que você procura hoje?"></ul>
-	    </div>
-		<div class="container">
+       <div class="pesquisa__area">
+        <form class="example" action="index.html" >
+            <input type="text" placeholder="O que você procura hoje.." name="search2">
+            <button type="submit"><i class="fa fa-search"></i></button>
+          </form>
+    </div>
+    
+    <div class="container">
             <a href="favoritos.html"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente" title="Favoritos"></a>
             <a href="#" class="container__link"><img src="img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras"><p class="container__texto">Minha sacola</p></a>
             <a href="perfil.html"class="container__link"><img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem" title="Meu Perfil"><p class="container__texto">Meu perfil</p></a>
@@ -55,8 +63,15 @@
 	<!-- começa o banner -->
 	
 	<section class="banner">
-				<input type="search" class="header__pesquisa2" placeholder="O que você procura hoje?"></ul>
-			<div class="dropdown">
+        <div class="pesquisa__area2">
+            <form class="example" action="index.html" >
+                <input type="text" placeholder="O que você procura hoje.." name="search2">
+                <button type="submit"><i class="fa fa-search"></i></button>
+              </form>
+    
+              </div>
+    
+        <div class="dropdown">
 			  
 		<a href="#" class="link__banner">Presentes</a>&emsp;
 		<a href="#" class="link__banner">Perfumaria</a>&emsp;

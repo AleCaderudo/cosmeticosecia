@@ -24,7 +24,7 @@
 
 .contato__email {
     padding: 1em;
-    border: 1px solid var(--preto);
+    border: 1px solid var(--verde);
     border-radius: 24px;
     width: 90%;
 	color: var(--verde);
@@ -32,7 +32,7 @@
 
 .contato__email::placeholder {
     font-family: var(--fonte-principal);
-    color: var(--verde);
+    color: var(--preto);
     background: url("../img/Email.svg") no-repeat;
     padding-left: 2em;
 }

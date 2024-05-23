@@ -1,18 +1,18 @@
 
 .formulario {
-    margin: 3em auto;
+    margin: 6em auto;
     width: 30vw;
 }
 
 .breadcrumb li {
     display: inline;
     font-size: 16px;
-    color: var(--verde);
+    color: var(--azul-claro);
 }
 
 .breadcrumb li+li:before {
     padding: 8px;
-    color: var(--verde);
+    color: var(--azul-claro);
     content: ">";
 }
 
@@ -43,7 +43,7 @@
 
 .campo__escrita {
     display: block;
-    border: 2px solid var(--verde);
+    border: 2px solid var(--azul-claro);
     border-radius: 20px;
     width: 100%;
     padding: 1em;

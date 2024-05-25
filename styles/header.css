@@ -1,3 +1,5 @@
+@import url("menuh.css");
+
 .cabeçalho {
     background-color: var(--branco);
     display: flex;
@@ -27,19 +29,20 @@
 	display: flex;
     justify-content: center;
 }
+
 .container__titulo, .container__titulo--negrito {
         font-family: var(--fonte-secundario);
-        font-size: 20px;
+        font-size: 23px;
 		margin-left: 60px;
     }
 
 .container__titulo {
-		font-weight: 400;
+		font-weight: 300;
         display: block;
     }
 
 .container__titulo--negrito {
-		font-weight: 700;
+		font-weight: 500;
     }
 
 .container__link {
@@ -49,179 +52,69 @@
         color: var(--preto);
     }
 	
-/* Inicio menu hamburguer */
-.main {
-    position: absolute;
-    height: 100vh;
-    transform: translate(0px, 0px);
-    width:  100vw;
-    transition: 0.35s;
-}
-
-.main.open {
-    width: calc(100vw - 250px);
-    transform: translate(200px, 0px);
-    transition: 0.7s;
-}
-
-.sidebar {
-    color: black;
-    width: calc(200px - 15px);
-    height:  320px;
-    padding: 10px;
-    justify-content: center;
-    background-color: var(--verde);
-    position: relative;
-	top: 55px;
-    left: 0px;
-	position: absolute;
-	float: left;
-    transform: translate(-290px, 0px);
-    transition: 0.5s;
-    z-index: 5;
-}
-
-.sidebar.open {
-    transform: translate(0px, 0px);
-    transition: 0.35s;
-	
-}
-
-.list {
-    list-style: none;
-    width: 90%;
-}
-
-.list-item {
-    margin: 0px 7px;
-    padding: 20px;
-    cursor: pointer;
-
-}
-
-.hamburger {
-    position: absolute;
-    top: 20px;
-    left: 10px;
-    z-index: 10;
-    cursor: pointer;
-	background-color: var(--verde);
-}
-
-.bar {
-    transition: 0.5s;
-    margin: 5px;
-    height: 5px;
-    width: 30px;
-    background-color: #000000;
-}
-
-.open .bar:nth-child(2) {
-    transition: 0.5s;
-    opacity: 0;
-}
-
-.open .bar:first-child {
-    transition: 0.5s;
-    transform: rotate(-45deg) translate(-7px, 7px);
-}
-
-.open .bar:last-child {
-    transition: 0.5s;
-    transform: rotate(45deg) translate(-7px, -7px);
-}
-
-@media not all and (hover: none) {
-    /* -> on Hover */
-    
-    .hamburger:hover .bar:nth-child(2) {
-        transition: 0.5s;
-        opacity: 1;
-    }
-    
-    .hamburger:hover .bar:first-child {
-        transition: 0.5s;
-        transform: rotate(45deg) translate(9px, -4px) scale(0.75, 1);
-    }
-    
-    .hamburger:hover .bar:last-child {
-        transition: 0.5s;
-        transform: rotate(-45deg) translate(9px, 4px) scale(0.75, 1);
-    }
-
-
-    .open:hover .bar:nth-child(2) {
-        transition: 0.5s;
-        opacity: 1;
-    }
-
-    .open:hover .bar:first-child {
-        transition: 0.5s;
-        transform: rotate(-45deg) translate(-9px, -4px) scale(0.75, 1);
-    }
-
-    .open:hover .bar:last-child {
-        transition: 0.5s;
-        transform: rotate(45deg) translate(-9px, 4px) scale(0.75, 1);
-    }
-
-    .list-item:hover {
-        background: var(--branco);
-        border-right: 10px solid var(--branco);
-    }
-}
-
 .pesquisa__area {
 	display: none;
 }
 
-form {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  button[type="submit"] {
-    background-color: var(--verde);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
+        /* pesquisa */
 
+        .form-container2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="search"] {
+            flex: 1; 
+            margin-right: 5px; 
+            width: 100%;
+            padding: 8px;
+            border: 1px solid var(--verde);
+            border-radius: 3px;
+        }
+        
+        button {
+            background-color: var(--verde);
+            color: var(--verde);
+            padding: 4px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: var(--verde);
+        }
+        
+        img {
+            vertical-align: middle;
+        }
+        
 @media screen and (min-width: 1024px) {
 
-.header__pesquisa2 {
+	.form-container2 {
 	display: none;
 }
 	
 .container__imagem {
-    padding: 1em;
+    padding: 2em;
 	width: 30px;
-	margin-left: 1em;
+	margin-left: 2em;
 }
 	
 .container__titulo, .container__titulo--negrito {
         font-family: var(--fonte-secundario);
-        font-size: 30px;
+        font-size: 22px;
 		margin-left: 40px;
 		
     }	
-    
-.pesquisa__area2 {
-    display: none;
-}
 	
 .container__imagem-transparente {
 		display: none;
@@ -229,41 +122,55 @@ form {
 	
 .pesquisa__area {
 	display: flex;
-	width: 350px;
+    align-items: center;
+	width: 300px;
 	justify-content: center;
     align-items: center;
 }
 
-.hamburger {
-    display: none;
+.form-container {
+    display: flex;
+    margin: 20px auto;
+    width: 300px;
+    padding: 0.5px;
+    border: 1px solid var(--verde);
+    border-radius: 5px;
 }
 
-form {
-    display: flex;
-    align-items: center;
-    width: 300px;
-    margin: 0 auto;
-  }
-  
-  label {
+label {
     display: block;
     margin-bottom: 5px;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  button[type="submit"] {
-    background-color: var(--verde);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-  }
+}
 
+input[type="search"] {
+    flex: 1; 
+    margin-right: 10px; 
+    width: 100%;
+    padding: 6px;
+    border: 1px solid var(--verde);
+    border-radius: 3px;
+}
+
+button {
+    background-color: var(--verde);
+    color: var(--verde);
+    padding: 4px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--verde);
+}
+
+img {
+    vertical-align: middle;
+}
+	
+	.hamburger {
+    display: none;
+}
 
 }
 
@@ -288,13 +195,11 @@ form {
     align-items: center;
 }
 		
-
 .header {
 		padding: 6em 0;
 	}
+
 .container__texto {
         display: block;
     }
-
-    
 }

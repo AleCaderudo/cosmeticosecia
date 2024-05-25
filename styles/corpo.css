@@ -1,3 +1,4 @@
+@import url("menuh.css");
 .corpo__titulo {
         font-size: 36px;
 	 	text-align: center;
@@ -12,8 +13,8 @@
 
 .ordenar_produtos--pai {
 		display: inline-block;
-        margin: 0 30vw 3em 30vw;
-        align-items: center;
+    margin: 0 30vw 3em 30vw;
+    align-items: center;
 }
 
 .ordenar_produtos {
@@ -62,9 +63,11 @@
 .descrição__texto {
     font-size: 14px;
 }
-.descrição__imagem {
-	display: flex;
-	margin-left: 0.5em;
+
+.img {
+    width: 50px;
+  	display: flex;
+	  margin-left: 0.5em;
 }
 
 .botões__item {
@@ -200,10 +203,10 @@
 
 @media screen and (min-width: 1728px) {
    
-    .ordenar_produtos--pai {
+.ordenar_produtos--pai {
 		display: inline-flex;
-        margin: 0 20vw 3em 20vw;
-        align-items: center;
+    margin: 0 20vw 3em 20vw;
+    align-items: center;
 }
 	
 	.ordenar_produtos {

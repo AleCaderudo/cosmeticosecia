@@ -1,0 +1,120 @@
+.sidebar {
+    color: black;
+    width: calc(200px - 15px);
+    height:  320px;
+    padding: 10px;
+    justify-content: center;
+    background-color: var(--verde);
+    position: relative;
+	top: 55px;
+    left: 0px;
+	position: absolute;
+	float: left;
+    transform: translate(-290px, 0px);
+    transition: 0.5s;
+    z-index: 5;
+}
+
+.sidebar.open {
+    transform: translate(0px, 0px);
+    transition: 0.35s;
+}
+
+.list {
+    list-style: none;
+    width: 90%;
+}
+
+.list-item {
+    margin: 0px 7px;
+    padding: 20px;
+    cursor: pointer;
+
+}
+
+/* Hamburger Menu Default */
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    z-index: 10;
+    cursor: pointer;
+	background-color: var(--verde);
+}
+
+.bar {
+    transition: 0.5s;
+    margin: 5px;
+    height: 5px;
+    width: 30px;
+    background-color: #000000;
+}
+
+
+/* X on open */
+
+.open .bar:nth-child(2) {
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.open .bar:first-child {
+    transition: 0.5s;
+    transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.open .bar:last-child {
+    transition: 0.5s;
+    transform: rotate(45deg) translate(-7px, -7px);
+}
+
+@media not all and (hover: none) {
+        
+    .hamburger:hover .bar:nth-child(2) {
+        transition: 0.5s;
+        opacity: 1;
+    }
+    
+    .hamburger:hover .bar:first-child {
+        transition: 0.5s;
+        transform: rotate(45deg) translate(9px, -4px) scale(0.75, 1);
+    }
+    
+    .hamburger:hover .bar:last-child {
+        transition: 0.5s;
+        transform: rotate(-45deg) translate(9px, 4px) scale(0.75, 1);
+    }
+
+    .open:hover .bar:nth-child(2) {
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    .open:hover .bar:first-child {
+        transition: 0.5s;
+        transform: rotate(-45deg) translate(-9px, -4px) scale(0.75, 1);
+    }
+
+    .open:hover .bar:last-child {
+        transition: 0.5s;
+        transform: rotate(45deg) translate(-9px, 4px) scale(0.75, 1);
+    }
+
+    .list-item:hover {
+        background: var(--branco);
+        border-right: 10px solid var(--branco);
+    }
+    .main {
+        position: absolute;
+        height: 100vh;
+        transform: translate(0px, 0px);
+        width:  100vw;
+        transition: 0.35s;
+    }
+    
+    .main.open {
+        width: calc(100vw - 250px);
+        transform: translate(200px, 0px);
+        transition: 0.7s;
+    }

@@ -42,15 +42,14 @@
          </div>
 		</div>
    
-       <!-- pesquisa -->
-		<div class="pesquisa__area">
-            <form class="example" action="index.html" style="margin:auto;max-width:300px">
-                <input type="text" placeholder="O que você procura hoje.." name="search2">
-                <button type="submit"><i class="fa fa-search"></i></button>
-              </form>
-        </div>
-        
-		<div class="container">
+       <!-- pesquisa 1-->
+       <div class="pesquisa__area">
+        <form class="form-container" action="#">
+            <input type="search" id="search-term" name="search-term" placeholder="Digite o que você procura..">
+            <button type="submit"><img src="./img/lupa.png" alt="Pesquisar"></button>
+        </form>
+</div>
+    <div class="container">
             <a href="favoritos.html"><img src="img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente" title="Favoritos"></a>
             <a href="#" class="container__link"><img src="img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras"><p class="container__texto">Minha sacola</p></a>
             <a href="perfil.html"class="container__link"><img src="img/Usuario.svg" alt="Meu perfil" class="container__imagem" title="Meu Perfil"><p class="container__texto">Meu perfil</p></a>
@@ -61,12 +60,12 @@
 	
 	<section class="banner">
 
-        <div class="pesquisa__area2">
-        <form class="example" action="index.html"><input type="text" placeholder="O que você procura hoje.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-          </form>
-          </div>
-
+       <!-- pesquisa 2-->
+               <form class="form-container2" action="#">
+                <input type="search" id="search-term" name="search-term" placeholder="Digite o que você procura..">
+                <button type="submit"><img src="./img/lupa.png" alt="Pesquisar"></button>
+            </form>
+    
 			<div class="dropdown">
 			  
 		<a href="#" class="link__banner">Presentes</a>&emsp;
@@ -122,7 +121,7 @@
                     <ul class="botões">
                    <li class="botões__item" id="0001"><a href="#id" class="botões__ancora"><img src="img/Favoritos.svg" alt="Favoritar Produto"></a></li><br>
 					</ul>	
-						<div class="descrição__imagem"><img src="img/example01.webp" ></div><br>
+						<div class="descrição__pic"><img src="img/example01.webp" ></div><br>
                     <div class="descrição">
                         <h3 class="descrição__produto">Nome do Produto</h3>
 						<h2 class="descrição__produto-01">Descrição do produto</h2>
@@ -315,15 +314,7 @@
 		
     </section>
 
-    <section class="contato">
-        <div class="contato__descrição">
-            <h2 class="contato__titulo">Fique por dentro das novidades!</h2>
-          <blockquote>
-              <p class="contato__texto">Novos produtos, promoções e outros.</p>
-          </blockquote>
-        </div>
-        <input type="email" placeholder="Cadastre seu e-mail" class="contato__email">
-    </section>
+    <hr class="hr1">
 
     <footer class="rodapé">
 		<h2><a  class="rodapé__titulo" href="http://mhps.com.br/" target="_blank" title="Desenvolvido por MHPS">Desenvolvido por MHPS</a></h2><br>

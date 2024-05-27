@@ -20,7 +20,6 @@ hr {
 .rodapé {
     background-color: var(--branco);
     padding: 2em;
-	align-items: center;
 }
 
     .lista-rodapé__link {

@@ -1,7 +1,7 @@
 .sidebar {
     color: black;
     width: calc(200px - 15px);
-    height:  320px;
+    height:  400px;
     padding: 10px;
     justify-content: center;
     background-color: var(--verde);
@@ -13,6 +13,7 @@
     transform: translate(-290px, 0px);
     transition: 0.5s;
     z-index: 5;
+
 }
 
 .sidebar.open {
@@ -22,12 +23,14 @@
 
 .list {
     list-style: none;
-    width: 90%;
+    width: 100%;
+    text-decoration: none;
+
 }
 
 .list-item {
     margin: 0px 7px;
-    padding: 20px;
+    padding: 15px;
     cursor: pointer;
 
 }
@@ -51,8 +54,6 @@
     background-color: #000000;
 }
 
-
-/* X on open */
 
 .open .bar:nth-child(2) {
     transition: 0.5s;
@@ -102,8 +103,9 @@
     }
 
     .list-item:hover {
-        background: var(--branco);
-        border-right: 10px solid var(--branco);
+        color: var(--branco);
+        background: var(--verde);
+
     }
     .main {
         position: absolute;

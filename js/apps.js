@@ -1,8 +1,3 @@
-//mudar icone favoritos
-
-
-
-
 //muda cor link 
   const mouseEfeito = document.querySelectorAll(".link__banner, .comprar");
 
@@ -82,5 +77,5 @@ function SidebarSelection(item) {
          if(timeoutId) {
             clearTimeout(timeoutId);
          }
-        timeoutId = setTimeout(showSlides, 5000); // Change image every 5 seconds
-      }
+        timeoutId = setTimeout(showSlides, 5000); // Tempo de troca da imagem 5 segundos
+          }

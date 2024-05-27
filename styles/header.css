@@ -1,4 +1,4 @@
-@import url("menuh.css");
+@import url("header-menuh.css");
 
 .cabeçalho {
     background-color: var(--branco);
@@ -73,7 +73,7 @@
         
         input[type="search"] {
             flex: 1; 
-            margin-right: 5px; 
+            margin-right: 0px; 
             width: 100%;
             padding: 8px;
             border: 1px solid var(--verde);
@@ -83,7 +83,7 @@
         button {
             background-color: var(--verde);
             color: var(--verde);
-            padding: 4px 20px;
+            padding: 8px 15px;
             border: none;
             border-radius: 3px;
             cursor: pointer;
@@ -144,7 +144,7 @@ label {
 
 input[type="search"] {
     flex: 1; 
-    margin-right: 10px; 
+    margin-right: 0px; 
     width: 100%;
     padding: 6px;
     border: 1px solid var(--verde);
@@ -154,7 +154,7 @@ input[type="search"] {
 button {
     background-color: var(--verde);
     color: var(--verde);
-    padding: 4px 20px;
+    padding: 6px 15px;
     border: none;
     border-radius: 3px;
     cursor: pointer;

@@ -1,28 +1,23 @@
 import ehUmCPF from "./valida-cpf.js";
 
+
 const camposDoFormulario = document.querySelectorAll('[required]')
-const formulario = document.querySelector('.formulario__campo');
+const formulario = document.querySelector('[data-formulario]');
 
 formulario.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const listaRespostas = {
-        "email": e.target.elements["email"].value,
         "nome": e.target.elements["nome"].value,
+        "email": e.target.elements["email"].value,
         "senha": e.target.elements["senha"].value,
-        "celular": e.target.elements["celular"].value,
+        "rg": e.target.elements["rg"].value,
         "cpf": e.target.elements["cpf"].value,
         "aniversario": e.target.elements["aniversario"].value,
     }
-
     localStorage.setItem("cadastro", JSON.stringify(listaRespostas));
 
-    window.location.href = "../pages/perfil-resposta.html";
-})
-
-camposDoFormulario.forEach((campo) => {
-    campo.addEventListener("blur", () => verificaCampo(campo));
-    campo.addEventListener("invalid", evento => evento.preventDefault())
+    window.location.href = "./perfil-resposta.html";
 })
 
 const tiposDeErro = [
@@ -33,26 +28,26 @@ const tiposDeErro = [
     'customError'
 ]
 
+
 const mensagens = {
-    email: {
-        valueMissing: "O campo de e-mail não pode estar vazio.",
-        typeMismatch: "Por favor, preencha um email válido.",
-        tooShort: "Por favor, preencha um email válido."
-    },
     nome: {
         valueMissing: "O campo de nome não pode estar vazio.",
         patternMismatch: "Por favor, preencha um nome válido.",
         tooShort: "Por favor, preencha um nome válido."
     },
+    email: {
+        valueMissing: "O campo de e-mail não pode estar vazio.",
+        typeMismatch: "Por favor, preencha um email válido.",
+        tooShort: "Por favor, preencha um e-mail válido."
+    },
     senha: {
         valueMissing: "O campo de confirmação de senha não pode estar vazio.",
-        patternMismatch: "Por favor, preencha uma senha válida.",
         tooShort: "A senha deve ter no mínimo 8 caracteres.",
-    },
-
-    celular: {
-        valueMissing: "O campo celular não pode estar vazio.",
-        tooShort: "Por favor, preencha com um numero válido."
+      },
+    rg: {
+        valueMissing: "O campo de RG não pode estar vazio.",
+        patternMismatch: "Por favor, preencha um RG válido.",
+        tooShort: "O campo de RG não tem caractéres suficientes."
     },
     cpf: {
         valueMissing: 'O campo de CPF não pode estar vazio.',
@@ -75,8 +70,12 @@ function verificaCampo(campo) {
         ehUmCPF(campo);
     }
 
-    tiposDeErro.forEach(erro => { if (campo.validity[erro]) {mensagem = mensagens[campo.name][erro]; console.log(mensagem); }})
-
+    tiposDeErro.forEach(erro => {
+        if (campo.validity[erro]) {
+            mensagem = mensagens[campo.name][erro];
+            console.log(mensagem);
+        }
+    })
     const mensagemErro = campo.parentNode.querySelector('.mensagem-erro');
     const validadorDeInput = campo.checkValidity();
 

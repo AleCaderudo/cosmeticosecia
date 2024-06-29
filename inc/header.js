@@ -16,7 +16,6 @@ const inserirHTML = `
 <a href="../pages/corpoebanho.html" class="container__link"><li onclick="SidebarSelection(this)" class="list-item">Corpo e Banho</li></a>
 <a href="../pages/make.html" class="container__link"><li onclick="SidebarSelection(this)" class="list-item">Make</li></a>
 <a href="../pages/cabelos.html" class="container__link"><li onclick="SidebarSelection(this)" class="list-item">Cabelos</li></a>
-<a href="../pages/favoritos.html" class="container__link"><li onclick="SidebarSelection(this)" class="list-item">Meus Favoritos</li></a>
 </ul>
 </div>
 
@@ -35,8 +34,8 @@ const inserirHTML = `
 </form>
 </div>
 <div class="container">
-    <a href="favoritos.html"><img src="../img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente" title="Favoritos"></a>
-    <a href="#" class="container__link"><img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras"><p class="container__texto">Minha sacola</p></a>
+    <a href="../pages/favoritos.html"><img src="../img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente" title="Favoritos"></a>
+    <a href="../pages/compras.html" class="container__link"><img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras"><p class="container__texto">Minhas compras</p></a>
     <a href="../pages/perfil.html"class="container__link"><img src="../img/Usuario.svg" alt="Meu perfil" class="container__imagem" title="Meu Perfil"><p class="container__texto">Meu perfil</p></a>
 </div>
 </header>

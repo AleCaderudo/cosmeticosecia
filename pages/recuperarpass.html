@@ -22,9 +22,9 @@
 	   
     <section class="formulario">
             <div class="formulario__container">
-                <h2 class="formulario__titulo-texto">Preencha os campos abaixo para acessar</h2>
+                <h2 class="formulario__titulo-texto">Preencha o campo abaixo com seu e-mail para recuperar a senha</h2>
             </div>
-		<form   class="principal__formulario"  action="./perfilok.html">
+		<form cmethod="post" class="principal__formulario"  action="./recuperarpassok.html" >
 
 			    <fieldset class="formulario__campo">
 				    <label class="campo__etiqueta" for="email">E-mail</label>
@@ -32,20 +32,9 @@
 					<span class="mensagem-erro"></span>
 			    </fieldset>
 		            
-                <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="senha">Senha</label>
-                    <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" required />
-                    <span class="mensagem-erro"></span>
-                </fieldset>
-
-            <li class="lista-rodapé__item">
-                <a href="cadastro.html" class="lista-rodapé__link">Clique aqui para se cadastrar</a>&emsp;&emsp;&emsp;&emsp;
-                <a href="recuperarpass.html" class="lista-rodapé__link">Clique aqui recuperar a senha</a>
-
-            </li>
 
                 <div>
-                    <button value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">Acessar</button>
+                    <button value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">Enviar</button>
                     <span class="mensagem-erro"></span>
                 </div>
             </form>

@@ -58,12 +58,28 @@
     color:hover var(--preto);
 	
 }
-
 .formulario__botao:hover {
     
     color: white;
-	
-}
+	}
+
+.formulario__ok {
+    background: var(--verde);
+    margin: 10em;
+    display: center;
+    text-align: center;
+    border: none;
+    padding: 1em 4em;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color:hover var(--preto);
+	text-decoration: none;
+	}
+.formulario__ok:hover {
+            color: white;
+    }
 
 .formulario__imagem--invisivel {
     display: none;
@@ -110,5 +126,4 @@
     .formulario__texto {
         margin: 0;
     }
-
 }

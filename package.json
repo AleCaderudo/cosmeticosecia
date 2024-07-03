@@ -1,7 +1,7 @@
 {
   "name": "site",
   "version": "1.0.0",
-  "description": "Site Cosmeticosecia versão 2.0 do treinamento Alura",
+  "description": "Site Cosmeticosecia versão 3.0 do treinamento Alura",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -12,7 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
+    "ejs": "^3.1.10",
     "express": "^4.19.2",
     "mongodb": "^6.6.2",
     "mongoose": "^8.4.0",

@@ -1,41 +1,88 @@
-<form   class="principal__formulario"   id="formCadastro"  method="POST" >
 
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos Cia.</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles.css">
+</head>
+<form class="principal__formulario" id="formCadastro" method="POST" action="../pages/cadastrook.html">
+
+  <fieldset class="formulario__campo">
+    <label class="campo__etiqueta" for="email">E-mail</label>
+  <input value="a@a" name="email" id="email" class="campo__escrita" type="email" minlength="2" required />
+  <span class="mensagem-erro"></span>
+  </fieldset>
         
-    <fieldset class="formulario__campo">
-        <label class="campo__etiqueta" for="nome">Nome</label>
-        <input name="nome" id="nome" class="campo__escrita" type="text" minlength="1" required />
-        <span class="mensagem-erro"></span>
-    </fieldset>
-    
-      
+        <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="nome">Nome</label>
+            <input value="Ale" name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
+            <span class="mensagem-erro"></span>
+        </fieldset>
+        
+        <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="pass">Senha</label>
+            <input value="22222" name="pass" id="pass" class="campo__escrita" type="password" minlength="8" required />
+            <span class="mensagem-erro"></span>
+          </fieldset>
+          
+        <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="rg">Celular</label>
+            <input value="54999999999" name="celular" id="celular" class="campo__escrita campo__escrita--menor" type="text" minlength="10" required/>
+            <span class="mensagem-erro"></span>
+        </fieldset>
+
+        <fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
+            <input value="89618246000" name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text" >
+            <span class="mensagem-erro"></span>
+  </fieldset>
+   
+<fieldset class="formulario__campo">
+            <label class="campo__etiqueta" for="data">Data de nascimento</label>
+            <input name="data" id="data" class="campo__escrita campo__escrita--menor" type="date" required />
+            <span class="mensagem-erro"></span>
+        </fieldset>
 
 
-    <div>
-        <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit" >
-        <span class="mensagem-erro"></span>
-        <div id="respo">resposta</div>
-    </div>
+  <div>
+    <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+    <span class="mensagem-erro"></span>
+    <div id="respo">resposta</div>
+  </div>
 </form>
 
 <script>
+const formElement = document.getElementById('formCadastro');
+const responseElement = document.getElementById('respo');
 
-const formE1 = document.getElementById('formCadastro');
+formElement.addEventListener('submit', (event) => {
+  event.preventDefault(); // Prevent default form submission
 
-formE1.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent form submission
+  const formData = new FormData(formElement);
+  const data = Object.fromEntries(formData);  // Convert form data to object
 
-  const formData = new FormData(formE1);
+  responseElement.innerHTML = JSON.stringify(data);  
 
-  // Send data to API using fetch
-  fetch('/clientes', {
-    method: 'POST',
-    body: formData
-  })
-    .then(response => response.json()) // Assuming the API returns JSON
-    .then(responseData => {
-      console.log('API Response:', responseData);
-    })
-    .catch(error => console.error('API Error:', error));
+  fetch('http://localhost:3000/clientes', {
+    method: "POST", 
+            body: JSON.stringify(data),
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/json',
+            } 
+           });
+
 });
 
 </script>
+
+</html>

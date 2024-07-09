@@ -73,14 +73,27 @@ formElement.addEventListener('submit', (event) => {
   responseElement.innerHTML = JSON.stringify(data);  
 
   fetch('https://api.vercel.app/clientes', {
-    method: "POST", 
-            body: JSON.stringify(data),
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/json',
-            } 
-           });
-
+    method: "POST",
+    body: JSON.stringify(data),
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(response => response.json())
+    .then(data => {
+      if (response.status === 201) { // Check response status for success
+        responseElement.innerHTML = 'Data saved successfully!';
+        console.log(data); // Optional: Log the response data
+      } else {
+        responseElement.innerHTML = 'Error saving data: ' + data.message;
+        console.error(data);
+      }
+    })
+    .catch(error => {
+      responseElement.innerHTML = 'Network Error: ' + error.message;
+      console.error(error);
+    });
 });
 
 </script>

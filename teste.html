@@ -68,12 +68,13 @@ formElement.addEventListener('submit', (event) => {
   event.preventDefault(); // Prevent default form submission
 
   const formData = new FormData(formElement);
-  const data = Object.fromEntries(formData); // Convert form data to object
+  const data = Object.fromEntries(formData);  // Convert form data to object
 
-  fetch('https://cosmeticoscia.vercel.app/clientes', {
+  responseElement.innerHTML = JSON.stringify(data);  
+
+  fetch('https://api.vercel.app/clientes', {
     method: "POST", 
             body: JSON.stringify(data),
-            mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',
             } 
@@ -83,7 +84,6 @@ formElement.addEventListener('submit', (event) => {
   // Update 'resposta' element with user-friendly message
   responseElement.innerHTML = JSON.stringify(data);
 });
-
 </script>
 
 </html>

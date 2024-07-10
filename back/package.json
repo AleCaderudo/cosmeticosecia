@@ -2,7 +2,7 @@
   "name": "site",
   "version": "1.0.0",
   "description": "Site Cosmeticosecia versão 3.0 do treinamento Alura",
-  "main": "./back/index.js",
+  "main": "index.js",
   "type": "module",
   "engines": {
     "node": "20.x"

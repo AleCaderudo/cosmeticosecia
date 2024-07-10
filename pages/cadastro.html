@@ -24,7 +24,7 @@
             <div class="formulario__container">
                 <h2 class="formulario__titulo-texto">Preencha os campos abaixo para criar seu cadastro</h2>
             </div>
-		<form class="principal__formulario"  action="/clientes" method="POST">
+		<form   class="principal__formulario"   id="formCadastro"  method="POST" action="../pages/cadastrook.html">
 
 			    <fieldset class="formulario__campo">
 				    <label class="campo__etiqueta" for="email">E-mail</label>
@@ -69,7 +69,7 @@
                 </fieldset>
 
                 <div>
-                    <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                    <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit" >
                     <span class="mensagem-erro"></span>
                 </div>
             </form>
@@ -80,8 +80,8 @@
 
 
     <footer ></footer>
-
     <script src="../inc/header.js"></script>
+    <script src="../src/fetch.js"></script>
     <script src="../inc/footer.js"></script>
     <script src="../js/favoritos.js", ></script>
     <script src="../js/apps.js"></script>

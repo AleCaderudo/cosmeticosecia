@@ -1,5 +1,4 @@
 import produto from "../models/Produto.js";
-import { cliente } from "../models/Cliente.js";
 
 
 class ProdutoController {

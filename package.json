@@ -2,9 +2,13 @@
   "name": "site",
   "version": "1.0.0",
   "description": "Site Cosmeticosecia versão 3.0 do treinamento Alura",
-  "main": "index.js",
+  "main": "./back/index.js",
   "type": "module",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
+    "start": "node ./back/src/app.js",
     "dev": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,7 +22,9 @@
     "express": "^4.19.2",
     "mongodb": "^6.6.2",
     "mongoose": "^8.4.0",
-    "nodemon": "^3.1.1"
+    "nodemon": "^3.1.1",
+    "react-router-dom": "^6.24.1",
+    "vercel": "^34.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.4.0",

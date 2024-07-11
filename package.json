@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node node back/index.js",
-    "dev": "nodemon server.js",
+    "dev": "nodemon back/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

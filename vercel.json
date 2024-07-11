@@ -1,0 +1,16 @@
+{
+  "routes": [
+    {
+      "source": "/api",
+      "destination": "/back"
+    },
+    {
+      "source": "/",
+      "destination": "index.html"
+    }
+  ],
+  "build": {
+    "command": "npm run build",
+    "functions": "back"
+  }
+}

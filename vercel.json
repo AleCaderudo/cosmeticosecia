@@ -7,17 +7,13 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/(.*)",  // Rota para API: direciona para /back/server.js
-      "dest": "/back/server.js"
+     {
+      "src": "/",           
+      "dest": "/index.html" 
     },
     {
-      "src": "/",           // Rota para index.html
-      "dest": "/index.html" // Especifica o arquivo a ser servido
-    },
-    {
-      "src": "/(.*)",       // Rota padrão (captura tudo que não foi acima)
-      "dest": "/back/server.js"  // Direciona para o backend para outras URLs
+      "src": "/(.*)",       
+      "dest": "/back/server.js"  
     }
   ]
 }

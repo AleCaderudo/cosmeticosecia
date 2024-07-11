@@ -10,7 +10,7 @@
     }
   ],
   "build": {
-    "command": "npm run build",
-    "functions": "back"
+    "src": "back/server.js",
+      "use": "@vercel/node"
   }
 }

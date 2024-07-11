@@ -1,16 +1,19 @@
 {
-  "routes": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "destination": "/back/server.js"
-    },
-    {
-      "source": "/",
-      "destination": "index.html"
-    }
-  ],
-  "build": {
-    "src": "back/server.js",
+      "src": "back/server.js",
       "use": "@vercel/node"
-  }
+      }
+    ],
+    "routes": [
+      {
+        "source": "/",
+        "destination": "index.html"
+      },
+    {
+      "src": "/(.*)",
+      "dest": "/back/server.js"
+    }
+  ]
 }

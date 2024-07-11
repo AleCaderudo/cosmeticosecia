@@ -12,7 +12,7 @@
       "dest": "/index.html"
     },
     {
-      "src": "/(.*)",
+      "src": "/api/(.*)",
       "dest": "back/server.js"
     }
   ]

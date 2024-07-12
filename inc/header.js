@@ -22,7 +22,7 @@ const inserirHTML = `
 
    <a href="../index.html"><img src="../img/logo.jpeg"  class="container__imagem" title="Cosméticos $ Cia"></a>
     <div class="titulo__alinhado" >
-    <a href="../index.html" class="container__link" title="CCosméticos $ Cia"><h1 class="container__titulo"><b class="container__titulo--negrito">Cosméticos</b> & Cia</h1></a>
+    <a href="../index.html" class="container__link" title="Cosméticos $ Cia"><h1 class="container__titulo"><b class="container__titulo--negrito">Cosméticos</b> & Cia</h1></a>
  </div>
 </div>
 

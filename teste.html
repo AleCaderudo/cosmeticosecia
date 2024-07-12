@@ -72,7 +72,7 @@ formElement.addEventListener('submit', (event) => {
 
   responseElement.innerHTML = JSON.stringify(data);  
 
-  fetch('https://api.vercel.app/clientes', {
+  fetch('https://cosmeticoscia.vercel.app/clientes', {
     method: "POST", 
             body: JSON.stringify(data),
             headers: {

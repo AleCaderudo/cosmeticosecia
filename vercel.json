@@ -12,14 +12,7 @@
       "src": "/(.*)",
       "dest": "/back/server.js"
     }
-  ],
- 
-"rewrites": [
-{
-"source": "/(.*)",
-"destination": "/index.html"
-}
-]
+  ]
 }
 
 

@@ -72,7 +72,7 @@ formElement.addEventListener('submit', (event) => {
 
   responseElement.innerHTML = JSON.stringify(data);  
 
-  fetch('https://cosmeticosecia.vercel.app/clientes', {
+  fetch('https://cosmback.vercel.app/clientes', {
     method: "POST", 
             body: JSON.stringify(data),
 	    mode: 'no-cors',

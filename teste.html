@@ -1,7 +1,5 @@
-
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,51 +13,42 @@
 	<link rel="stylesheet" href="../styles.css">
 </head>
 <form class="principal__formulario" id="formCadastro" method="POST" action="../pages/cadastrook.html">
-
   <fieldset class="formulario__campo">
     <label class="campo__etiqueta" for="email">E-mail</label>
   <input value="a@a" name="email" id="email" class="campo__escrita" type="email" minlength="2" required />
   <span class="mensagem-erro"></span>
   </fieldset>
-        
         <fieldset class="formulario__campo">
             <label class="campo__etiqueta" for="nome">Nome</label>
             <input value="Ale" name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
             <span class="mensagem-erro"></span>
         </fieldset>
-        
-        <fieldset class="formulario__campo">
+         <fieldset class="formulario__campo">
             <label class="campo__etiqueta" for="pass">Senha</label>
             <input value="22222" name="pass" id="pass" class="campo__escrita" type="password" minlength="8" required />
             <span class="mensagem-erro"></span>
           </fieldset>
-          
         <fieldset class="formulario__campo">
             <label class="campo__etiqueta" for="rg">Celular</label>
             <input value="54999999999" name="celular" id="celular" class="campo__escrita campo__escrita--menor" type="text" minlength="10" required/>
             <span class="mensagem-erro"></span>
         </fieldset>
-
         <fieldset class="formulario__campo">
             <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
             <input value="89618246000" name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text" >
             <span class="mensagem-erro"></span>
   </fieldset>
-   
 <fieldset class="formulario__campo">
             <label class="campo__etiqueta" for="data">Data de nascimento</label>
             <input name="data" id="data" class="campo__escrita campo__escrita--menor" type="date" required />
             <span class="mensagem-erro"></span>
         </fieldset>
-
-
   <div>
     <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
     <span class="mensagem-erro"></span>
     <div id="respo">resposta</div>
   </div>
 </form>
-
 <script>
 const formElement = document.getElementById('formCadastro');
 const responseElement = document.getElementById('respo');
@@ -74,7 +63,7 @@ formElement.addEventListener('submit', (event) => {
 
   fetch('https://cosmback.vercel.app/clientes', {
     method: "POST", 
-            body: JSON.stringify(data),
+            body: nome,
 	    mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',

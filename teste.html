@@ -63,16 +63,7 @@ formElement.addEventListener('submit', (event) => {
 
   fetch('https://cosmback.vercel.app/clientes', {
     method: "POST", 
-            body: {
-    "email": "bbbbbb6ocadeo@hotmail.com",
-    "pass": "ale2",
-    "nome": "TioCaderudo",
-    "celular": "54888470324",
-    "cpf": "89618246000",
-    "data": "2024/07/24"
-   
-   
-},
+            body: JSON.stringify(data),
 	    mode: 'no-cors',
             headers: {
                 'Content-Type': 'application/json',

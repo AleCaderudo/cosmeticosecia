@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Fetch API</title>
+</head>
+<body>
+    <h1>Dados da API</h1>
+    <ul id="data-list"></ul>
+
+    <script>
+        async function fetchData() {
+            try {
+                const response = await fetch('https://cosmback.vercel.app/clientes');
+                if (!response.ok) {
+                    throw new Error('Erro na requisição');
+                }
+                const data = await response.json();
+                displayData(data);
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+            }
+        }
+
+        function displayData(data) {
+            const dataList = document.getElementById('data-list');
+            data.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = item.nome; // Ajuste conforme a estrutura dos dados
+                dataList.appendChild(listItem);
+            });
+        }
+
+        // Chama a função para buscar os dados quando a página carrega
+        fetchData();
+    </script>
+</body>
+</html>

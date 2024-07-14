@@ -1,52 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clientes</title>
 </head>
 <body>
-    <h1>Lista de Clientes</h1>
-    <ul id="clientes"></ul>
+    <h1>Clientes</h1>
+    <div id="clientes"></div>
 
     <script>
-        // URL da API
-        const url = 'https://cosmback.vercel.app/clientes';
-
-        // Função para criar um novo elemento HTML
-        function createNode(element) {
-            return document.createElement(element);
-        }
-
-        // Função para adicionar um elemento filho a um elemento pai
-        function append(parent, el) {
-            return parent.appendChild(el);
-        }
-
-        // Seleciona o elemento UL onde os dados serão exibidos
-        const ul = document.getElementById('clientes');
-
-        // Função assíncrona para buscar dados da API
+        // Função para buscar dados da URL e exibi-los na página
         async function fetchClientes() {
             try {
-                const response = await fetch(url, { mode: 'no-cors' });
-                if (!response.ok) {
-                    throw new Error('Erro na requisição');
-                }
+                const response = await fetch('https://cosmback.vercel.app/clientes');
                 const data = await response.json();
-                let clientes = data; // Supondo que a resposta seja um array de clientes
-                clientes.forEach((cliente) => {
-                    let li = createNode('li');
-                    li.innerHTML = `${cliente.nome} - ${cliente.email}`; // Ajuste conforme os campos da API
-                    append(ul, li);
+                
+                const clientesDiv = document.getElementById('clientes');
+                data.forEach(cliente => {
+                    const clienteDiv = document.createElement('div');
+                    clienteDiv.innerHTML = `<p>${cliente.name}: ${cliente.email}</p>`;
+                    clientesDiv.appendChild(clienteDiv);
                 });
             } catch (error) {
                 console.error('Erro ao buscar dados:', error);
             }
         }
 
-        // Chama a função para buscar e exibir os dados
-        fetchClientes();
+        // Chamar a função quando a página carregar
+        window.onload = fetchClientes;
     </script>
 </body>
 </html>

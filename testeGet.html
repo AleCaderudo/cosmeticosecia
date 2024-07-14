@@ -11,7 +11,7 @@
   <script>
     const fetchClientes = async () => {
     try {
-        const response = await fetch('https://cosmback.vercel.app/clientes', {mode: 'no-cors'});
+        const response = await fetch('https://cosmback.vercel.app/clientes');
         if (!response.ok) { // Check for non-2xx status codes
             throw new Error(`HTTP error! status: ${response.status}`);
         }

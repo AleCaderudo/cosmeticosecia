@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clientes</title>
 </head>
 <body>
-    <h1>Clientes</h1>
-    <div id="clientes"></div>
-
-    <script>
-        // Função para buscar dados da URL e exibi-los na página
-        async function fetchClientes() {
-            try {
-                const response = await fetch('https://cosmback.vercel.app/clientes');
-                const data = await response.json();
-                
-                const clientesDiv = document.getElementById('clientes');
-                data.forEach(cliente => {
-                    const clienteDiv = document.createElement('div');
-                    clienteDiv.innerHTML = `<p>${cliente.name}: ${cliente.email}</p>`;
-                    clientesDiv.appendChild(clienteDiv);
-                });
-            } catch (error) {
-                console.error('Erro ao buscar dados:', error);
-            }
+  <h1>Lista de Clientes</h1>
+  <ul id="respo"></ul>
+  <script>
+    const fetchClientes = async () => {
+    try {
+        const response = await fetch('https://cosmback.vercel.app/clientes', {cache: 'no-store', mode: 'no-cors'});
+        if (!response.ok) { // Check for non-2xx status codes
+            throw new Error(`HTTP error! status: ${response.status}`);
         }
+        const clientes = await response.json(); // Use response.json() to parse JSON
+        const lista = document.getElementById('respo');
+        // Process and display the fetched data here (e.g., using a loop)
+        // ...
+    } catch (error) {
+        console.error('Erro ao buscar clientes:', error);
+    }
+};
 
-        // Chamar a função quando a página carregar
-        window.onload = fetchClientes;
-    </script>
+    fetchClientes();
+  </script>
 </body>
 </html>

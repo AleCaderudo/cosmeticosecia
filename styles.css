@@ -5,8 +5,9 @@
 @import url("styles/rodape.css");
 @import url("styles/formulario.css");
 
+
 :root {
-    --cor-de-fundo: #EBECEE;
+    --cor-de-fundo: white;
     --branco: #FFFFFF;
     --verde: #00FA9A;
     --fonte-principal: "Poppins";

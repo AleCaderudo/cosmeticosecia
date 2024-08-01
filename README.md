@@ -1,2 +1,2 @@
 # cosmeticosecia
-Site versão 2.0 do treinamento Alura 
+Site versão 3.0 do treinamento Alura Grupo o Boticario em Javascript e Mongo Db.

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Produtos</title>
+  <link rel="stylesheet" href="styles.css"> </head>
+<body>
+    
+
+    <div class="tabela">
+    <h1>Sistema do Administrador</h1>
+
+    <p style="color: red;">Osb: Inclui essa área para que o administrador do site possa incluir ou apagar produtos.
+                     Ao contrário do resto do sistema, essa autenticação não esta salva em mongo DB e também não mantêm o usuário logado,
+                      serve apenas para dar acesso ao arquivo inicial. Para retornar ao site clique
+                     <a href="../index.html">aqui</a>, ou para acessar utilize Usuário: <strong>admin</strong> Senha:  <strong>pass</strong></p>
+
+    <form id="loginForm">
+                
+        <label for="usuario">Usuário:</label>
+
+
+        <input type="text" id="usuario" name="usuario">
+        <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha"> 
+
+        <br><br> 
+
+        <button class="button" type="submit">Entrar</button>
+    </form>
+    <p id="mensagem"></p>
+
+</div>
+    <script src="index.js"></script>
+
+
+</body>
+
+</html>

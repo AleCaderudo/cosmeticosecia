@@ -24,12 +24,13 @@
             <div class="formulario__container">
                 <h2 class="formulario__titulo-texto">Preencha os campos abaixo para criar seu cadastro</h2>
             </div>
-		<form   class="principal__formulario"   id="formCadastro"  method="POST" action="../pages/cadastrook.html">
+		<form   class="principal__formulario"   id="formCadastro"  >
 
 			    <fieldset class="formulario__campo">
 				    <label class="campo__etiqueta" for="email">E-mail</label>
 					<input name="email" id="email" class="campo__escrita" type="email" minlength="6" required />
-					<span class="mensagem-erro"></span>
+					<span class="mensagem-erro"></span> 
+
 			    </fieldset>
 		            
                 <fieldset class="formulario__campo">
@@ -39,8 +40,8 @@
                 </fieldset>
                 
                 <fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="senha">Senha</label>
-                    <input name="senha" id="senha" class="campo__escrita" type="password" minlength="8" required />
+                    <label class="campo__etiqueta" for="pass">Senha</label>
+                    <input name="pass" id="pass" class="campo__escrita" type="password" minlength="8" required />
                     <span class="mensagem-erro"></span>
                   </fieldset>
                   
@@ -57,8 +58,8 @@
 					</fieldset>
            
 				<fieldset class="formulario__campo">
-                    <label class="campo__etiqueta" for="aniversario">Data de nascimento</label>
-                    <input name="aniversario" id="aniversario" class="campo__escrita campo__escrita--menor" type="date" required />
+                    <label class="campo__etiqueta" for="data">Data de nascimento</label>
+                    <input name="data" id="data" class="campo__escrita campo__escrita--menor" type="date" required />
                     <span class="mensagem-erro"></span>
                 </fieldset>
 				
@@ -67,7 +68,7 @@
                     <p class="termos__texto">Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na Política de Privacidade.</p>
                     <span class="mensagem-erro"></span>
                 </fieldset>
-
+                <div id="respo" ></div><br>
                 <div>
                     <input value="Avançar" class="formulario__botao" id="enviar" data-botao-enviar type="submit" >
                     <span class="mensagem-erro"></span>
@@ -81,9 +82,8 @@
 
     <footer ></footer>
     <script src="../inc/header.js"></script>
-    <script src="../src/POST.js"></script>
+    <script src="jsf/cadastroPost.js"></script>
     <script src="../inc/footer.js"></script>
-    <script src="../js/favoritos.js", ></script>
     <script src="../js/apps.js"></script>
     <script src="../server.js"></script>
 

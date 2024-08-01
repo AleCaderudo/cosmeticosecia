@@ -1,0 +1,103 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 35px;
+  }
+  
+  .form {
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+
+  .formLista {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+  
+  input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+  .link {
+    font-size: 16px;
+    text-align: right;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-left: 20px;
+    background-color: #4fcf53;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button {
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #4fcf53;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .success {
+    color: rgb(75, 206, 75);
+    font-weight: bold;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+
+  .delete-button {
+    display: flex;
+    background: none;
+    border: none;
+    color: rgb(63, 216, 109);
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    color: darkred;
+  }
+  
+  .product-item {
+   
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .product-item span {
+    margin-right: 10px;
+  }
+
+  .mensagem__aviso {
+    text-align: center;
+  }
+  
+  .tabela {
+    margin: 0 auto;
+    width: 50%;
+}
+.menu__admin {
+  margin: 0 auto;
+  width: 50%;
+}

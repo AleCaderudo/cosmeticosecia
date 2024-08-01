@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos Cia.</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header ></header>
+	
+	<!-- começa o banner -->
+	
+	<section class="formulario">
+        <div class="formulario__container">
+            <h2 class="formulario__titulo-texto">Modifique os campos abaixo para atualizar seus dados</h2>
+        </div>
+        <form class="principal__formulario" id="formCadastro">
+            <input type="hidden" id="userId" name="userId">
+            
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="email">E-mail</label>
+                <input name="email" id="email" class="campo__escrita" type="email" minlength="6" required />
+                <span class="mensagem-erro"></span> 
+            </fieldset>
+            
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="nome">Nome</label>
+                <input name="nome" id="nome" class="campo__escrita" type="text" minlength="3" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="pass">Senha</label>
+                <input name="pass" id="pass" class="campo__escrita" type="text" minlength="8" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="celular">Celular</label>
+                <input name="celular" id="celular" class="campo__escrita campo__escrita--menor" type="text" minlength="10" required/>
+                <span class="mensagem-erro"></span>
+            </fieldset>
+        
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="cpf">CPF (apenas números)</label>
+                <input name="cpf" id="cpf" class="campo__escrita campo__escrita--menor" required type="text" minlength="11" maxlength="14" pattern="\d{3}\.?\d{3}\.?\d{3}-?\d{2}"/>
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="data">Data de nascimento</label>
+                <input name="data" id="data" class="campo__escrita campo__escrita--menor" type="date" required />
+                <span class="mensagem-erro"></span>
+            </fieldset>
+            
+        <div id="respo" ></div>
+            <div>
+                <input value="Atualizar" class="formulario__botao" id="enviar" data-botao-enviar type="submit">
+                <span class="mensagem-erro"></span>
+            </div>
+        </form>
+        
+        
+
+    </section>
+
+    <hr class="hr1">
+
+
+    <footer></footer>
+
+
+
+<script src="../inc/header.js"></script>
+<script src="../pages/jsf/editarusuario.js"></script>
+<script src="../inc/footer.js"></script>
+<script src="../js/favoritos.js" ></script>
+<script src="../js/apps.js"></script>
+  
+</body>
+
+</html>

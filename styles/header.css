@@ -24,6 +24,10 @@
 .container__texto {
     display: none;
 }
+.container__texto-link {
+    display: flex;
+    text-decoration: none;
+}
 
 .titulo__alinhado {
 	display: flex;
@@ -82,7 +86,7 @@
         
         button {
             background-color: var(--verde);
-            color: var(--verde);
+            color: var(--preto);
             padding: 8px 15px;
             border: none;
             border-radius: 3px;
@@ -96,7 +100,8 @@
         img {
             vertical-align: middle;
         }
-        
+ 
+            
 @media screen and (min-width: 1024px) {
 
 	.form-container2 {
@@ -153,7 +158,7 @@ input[type="search"] {
 
 button {
     background-color: var(--verde);
-    color: var(--verde);
+    color: var(--preto);
     padding: 6px 15px;
     border: none;
     border-radius: 3px;
@@ -200,6 +205,7 @@ img {
 	}
 
 .container__texto {
-        display: block;
+        display: flex;
+        text-decoration: none;
     }
 }

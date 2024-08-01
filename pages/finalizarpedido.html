@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos Cia. - Finalizar Pedido</title>
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+
+<body>
+    <header></header>
+
+
+    <section class="formulario">
+        <div class="formulario__container">
+            <h2 class="formulario__titulo-texto">Preencha os campos abaixo para finalizar seu pedido</h2>
+        </div>
+                <p id="usuarioNome" class="usuario-logado__nome"></p>
+
+        <form class="principal__formulario" id="formFinalizarPedido">
+
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="endereco">Endereço</label>
+                <input name="endereco" id="endereco" class="campo__escrita" type="text" required />
+                <span class="mensagem-erro" id="erroEndereco"></span>
+            </fieldset>
+
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="cidade">Cidade</label>
+                <input name="cidade" id="cidade" class="campo__escrita" type="text" required />
+                <span class="mensagem-erro" id="erroCidade"></span>
+            </fieldset>
+
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="estado">Estado</label>
+                <select name="estado" id="estado" class="campo__escrita" type="text" required >
+                <option value="">Selecione</option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espírito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+                <span class="mensagem-erro" id="erroEstado"></span>
+            </fieldset>
+
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="cep">CEP</label>
+                <input name="cep" id="cep" class="campo__escrita" type="text" required pattern="\d{5}-?\d{3}" />
+                <span class="mensagem-erro" id="erroCep"></span>
+            </fieldset>
+
+            <fieldset class="formulario__campo">
+                <label class="campo__etiqueta" for="formaPagamento">Forma de Pagamento</label>
+                <select name="formaPagamento" id="formaPagamento" class="campo__escrita" required>
+                    <option value="">Selecione</option>
+                    <option value="pix">Pix</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="cartao">Cartão</option>
+                </select>
+                <span class="mensagem-erro" id="erroFormaPagamento"></span>
+            </fieldset>
+
+            <div id="camposCartao" style="display: none;">
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="numeroCartao">Número do Cartão</label>
+                    <input name="numeroCartao" id="numeroCartao" class="campo__escrita" type="text" pattern="\d{16}" />
+                    <span class="mensagem-erro" id="erroNumeroCartao"></span>
+                </fieldset>
+
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="nomeCartao">Nome no Cartão</label>
+                    <input name="nomeCartao" id="nomeCartao" class="campo__escrita" type="text" />
+                    <span class="mensagem-erro" id="erroNomeCartao"></span>
+                </fieldset>
+
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="validadeCartao">Validade (MM/AA)</label>
+                    <input name="validadeCartao" id="validadeCartao" class="campo__escrita" type="text" pattern="\d{2}/\d{2}" />
+                    <span class="mensagem-erro" id="erroValidadeCartao"></span>
+                </fieldset>
+
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta" for="cvvCartao">CVV</label>
+                    <input name="cvvCartao" id="cvvCartao" class="campo__escrita" type="text" pattern="\d{3}" />
+                    <span cvvCartao id="erroCvvCartao"></span>
+                </fieldset>
+            </div>
+
+            <div id="areaPix" style="display: none;">
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta">QR Code para pagamento via Pix</label>
+                    <div class="qr-code">
+                        <img class="img__compras" src="../img/frame.png" alt="QR Code para pagamento via Pix">
+                    </div>
+                </fieldset>
+            </div>
+
+            <div id="areaBoleto" style="display: none;">
+                <fieldset class="formulario__campo">
+                    <label class="campo__etiqueta">Código de Barras para pagamento via Boleto</label>
+                    <div class="codigo-barras">
+                        <img src="../img/barcode.png" alt="Código de Barras para pagamento via Boleto">
+                    </div>
+                </fieldset>
+            </div>
+
+            <div>
+                <input value="Finalizar Pedido" class="formulario__botao" id="enviar" type="submit">
+                <span class="mensagem-erro" id="erroGeral"></span>
+            </div>
+        </form>
+    </section>
+
+    <hr/>
+
+    <footer></footer>
+    <script src="../inc/header.js"></script>
+    <script src="./jsf/finalizarpedido.js"></script>
+     <script src="../inc/footer.js"></script>
+    <script src="../js/apps.js"></script>
+    <script src="../server.js"></script>
+    <script src="../js/script.js" type="module"></script>
+
+</body>
+
+</html>

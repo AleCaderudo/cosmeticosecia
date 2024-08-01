@@ -1,0 +1,41 @@
+.card__compras {
+    width: 700px;
+    background: var(--branco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 1em;
+    display: inline-flex;
+    margin: flex;
+
+}
+
+.ordenar_produtos--pai__compras {
+    flex-direction: column;
+    display: block;
+    margin: 0 30vw 3em 30vw;
+    align-items: center;
+}
+
+.ordenar_produtos__compras {
+    display: block;
+}
+
+.fonte__compras {
+    margin: 20px;
+    font-size: 20px;
+}
+.tabela__compras__finalizadas {
+    margin: 0 auto;
+    width: 50%;
+}
+
+.img__compras {
+    width: 50px;
+    display: flex;
+    margin-left: 0.5em;
+}
+
+.lixeira__compras {
+    background-color: white;
+}

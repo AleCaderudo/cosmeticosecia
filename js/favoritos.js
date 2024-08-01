@@ -1,46 +1,179 @@
-const listItems = document.querySelectorAll(".botões__item"); // Select all list items
+document.addEventListener("DOMContentLoaded", async () => {
+    const logDiv = document.getElementById('log');
+    const favoritosDiv = document.getElementById('favoritos');
+    const paginationDiv = document.getElementById('pagination');
 
-listItems.forEach(listItem => {
-  const anchor = listItem.querySelector(".botões__ancora"); // Get the anchor element
-  const defaultImage = "img/Favoritos.svg"; // Default image source (assuming this is the initial state)
-  const hoverImage = "img/FavoritosA.svg"; // Replace with your hover image path
-  const clickImage = "img/FavoritosB.svg"; // Replace with your click image path
+    const itemsPerPage = 4; // Número de itens por página
+    let currentPage = 1; // Página inicial
+    let produtosFavoritos = [];
 
-  let currentImage = defaultImage; // Initialize current image to default
-  let currentTitle = "Favoritar"; // Initialize current title based on default image
+    const logMessage = (message) => {
+        logDiv.innerHTML += message + '\n';
+    };
 
-  // Set initial image and title
-  anchor.querySelector("img").src = currentImage;
-  listItem.title = currentTitle;
+    const fetchFavoritos = async () => {
+        const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
-  anchor.addEventListener("mouseover", () => {
-    if (currentImage !== clickImage) { // Only change if not already on click image
-      anchor.querySelector("img").src = hoverImage;
-      currentImage = hoverImage;
-    }
-  });
+        if (loggedInUser && loggedInUser._id) {
+            try {
+                const responseUser = await fetch(`https://cosmback.vercel.app/clientes/${loggedInUser._id}`);
+                if (!responseUser.ok) {
+                    throw new Error('Erro ao buscar dados do usuário');
+                }
+                const userData = await responseUser.json();
+                const favoritos = userData.favoritos || [];
 
-  anchor.addEventListener("click", () => {
-    if (currentImage === defaultImage) {
-      anchor.querySelector("img").src = clickImage;
-      currentImage = clickImage;
-      currentTitle = "Desmarcar"; // Update title on click to FavoritosB.svg
-    } else if (currentImage === hoverImage) {
-      anchor.querySelector("img").src = clickImage;
-      currentImage = clickImage;
-      currentTitle = "Desmarcar"; // Update title on click to FavoritosA.svg
-    } else { // Change back to default if on click image (FavoritosB.svg)
-      anchor.querySelector("img").src = defaultImage;
-      currentImage = defaultImage;
-      currentTitle = "Favoritar"; // Update title back to default
-    }
-    listItem.title = currentTitle; // Update title after image change
-  });
+                if (favoritos.length === 0) {
+                    favoritosDiv.innerHTML = '<p>Você não tem produtos favoritos.</p>';
+                    return;
+                }
 
-  anchor.addEventListener("mouseout", () => { // Reset on mouseout
-    if (currentImage !== clickImage) {
-      anchor.querySelector("img").src = defaultImage;
-      currentImage = defaultImage;
-    }
-  });
+                const responseProdutos = await fetch('https://cosmback.vercel.app/produtos');
+                if (!responseProdutos.ok) {
+                    throw new Error('Erro na requisição de produtos');
+                }
+                const produtos = await responseProdutos.json();
+
+                produtosFavoritos = produtos.filter(produto => favoritos.includes(produto._id));
+                renderPage(produtosFavoritos, currentPage);
+                setupPagination(produtosFavoritos);
+            } catch (error) {
+                logMessage('Erro ao buscar favoritos: ' + error.message);
+            }
+        } else {
+            logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');
+        }
+    };
+
+    const renderPage = (produtos, page) => {
+        favoritosDiv.innerHTML = '';
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const paginatedItems = produtos.slice(start, end);
+
+        paginatedItems.forEach(produto => {
+            favoritosDiv.innerHTML += `
+                <div class="card">
+                    <div class="card__descrição">
+                        <div class="card__botões">
+                            <button class="botões__item" title="Clique aqui para retirar dos favoritos" data-product-id="${produto._id}" aria-label="Retirar dos Favoritos">
+                                <img class="favorito-icon" src="../img/FavoritosB.svg" alt="Favoritar Produto">
+                            </button>
+                            <div class="descrição__imagem"><img src="../img/produtos/${produto.imagem}"></div><br>
+                            <div class="descrição">
+                                <h3 class="descrição__produto">${produto.nome}</h3>
+                                <h2 class="descrição__produto-01">${produto.descricao}</h2>
+                                <img title="Produto nota ${produto.nota} na avaliação" src="../img/Estrelinhas${produto.nota}.svg" alt="${produto.nota}"><br><br>
+                                <h1 class="preço">R$ ${produto.preco}</h1><br>
+                                <p class="descrição__texto">${produto.informacao}</p><br><br>
+                                <a href="compras.html" class="comprar" data-product-id="${produto._id}">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+
+        document.querySelectorAll('.botões__item').forEach(button => {
+            button.addEventListener('click', async (event) => {
+                event.preventDefault();
+                const productId = event.currentTarget.getAttribute('data-product-id');
+                const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+                if (loggedInUser && loggedInUser._id) {
+                    try {
+                        const responseUser = await fetch(`https://cosmback.vercel.app/clientes/${loggedInUser._id}`);
+                        if (!responseUser.ok) {
+                            throw new Error('Erro ao buscar dados do usuário');
+                        }
+                        const userData = await responseUser.json();
+                        let favoritosAtuais = userData.favoritos || [];
+
+                        favoritosAtuais = favoritosAtuais.filter(fav => fav !== productId);
+
+                        const response = await fetch(`https://cosmback.vercel.app/clientes/${loggedInUser._id}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                favoritos: favoritosAtuais
+                            })
+                        });
+
+                        if (response.ok) {
+                            loggedInUser.favoritos = favoritosAtuais;
+                            localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+                            fetchFavoritos(); // Recarrega os favoritos
+                        }
+                    } catch (error) {
+                        logMessage('Erro ao atualizar favoritos: ' + error.message);
+                    }
+                } else {
+                    logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');
+                }
+            });
+        });
+
+        document.querySelectorAll('.comprar').forEach(link => {
+            link.addEventListener('click', async (event) => {
+                event.preventDefault();
+                const productId = event.currentTarget.getAttribute('data-product-id');
+                const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+
+                if (loggedInUser && loggedInUser._id) {
+                    try {
+                        const responseUser = await fetch(`https://cosmback.vercel.app/clientes/${loggedInUser._id}`);
+                        if (!responseUser.ok) {
+                            throw new Error('Erro ao buscar dados do usuário');
+                        }
+                        const userData = await responseUser.json();
+                        let comprasAtuais = userData.compras || [];
+
+                        comprasAtuais.push(productId);
+
+                        const response = await fetch(`https://cosmback.vercel.app/clientes/${loggedInUser._id}`, {
+                            method: 'PUT',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify({
+                                compras: comprasAtuais
+                            })
+                        });
+
+                        if (response.ok) {
+                            logMessage('Produto adicionado às compras com sucesso!');
+                            loggedInUser.compras = comprasAtuais;
+                            localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
+                            window.location.href = "../pages/compras.html";
+                        }
+                    } catch (error) {
+                        window.location.href = "../pages/compras.html";
+                        logMessage('Erro ao adicionar produto às compras: ' + error.message);
+                    }
+                } else {
+                    
+                    logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');
+                }
+            });
+        });
+    };
+
+    const setupPagination = (produtos) => {
+        paginationDiv.innerHTML = '';
+
+        const pageCount = Math.ceil(produtos.length / itemsPerPage);
+        for (let i = 1; i <= pageCount; i++) {
+            const pageButton = document.createElement('button');
+            pageButton.textContent = i;
+            pageButton.addEventListener('click', () => {
+                currentPage = i;
+                renderPage(produtos, currentPage);
+            });
+            paginationDiv.appendChild(pageButton);
+        }
+    };
+
+    fetchFavoritos();
 });

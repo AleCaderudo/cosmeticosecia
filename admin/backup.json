@@ -1,0 +1,202 @@
+[
+{
+    "codigo": 1,
+    "categoria": "presentes",
+    "nota": 1,
+    "nome": "Produto 01",
+    "descricao": "Descrição do produto",
+    "preco": 10.55,
+    "imagem": "example01.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 2,
+    "categoria": "presentes",
+    "nota": 2,
+    "nome": "Produto 02",
+    "descricao": "Descrição do produto",
+    "preco": 20.25,
+    "imagem": "example02.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 3,
+    "categoria": "presentes",
+    "nota": 3,
+    "nome": "Produto 03",
+    "descricao": "Descrição do produto",
+    "preco": 30.55,
+    "imagem": "example03.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 4,
+    "categoria": "presentes",
+    "nota": 4,
+    "nome": "Produto 04",
+    "descricao": "Descrição do produto",
+    "preco": 40.55,
+    "imagem": "example04.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 5,
+    "categoria": "perfumaria",
+    "nota": 1,
+    "nome": "produto 05",
+    "descricao": "Descrição do produto",
+    "preco": 50.55,
+    "imagem": "example05.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros"
+  },
+  {
+    "codigo": 6,
+    "categoria": "perfumaria",
+    "nota": 2,
+    "nome": "Produto 06",
+    "descricao": "Descrição do produto",
+    "preco": 60.55,
+    "imagem": "example06.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 7,
+    "categoria": "perfumaria",
+    "nota": 3,
+    "nome": "Produto 07",
+    "descricao": "Descrição do produto",
+    "preco": 70.55,
+    "imagem": "example07.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 8,
+    "categoria": "perfumaria",
+    "nota": 4,
+    "nome": "Produto 08",
+    "descricao": "Descrição do produto",
+    "preco": 80.55,
+    "imagem": "example08.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 9,
+    "categoria": "corpo e banho",
+    "nota": 1,
+    "nome": "Produto 09",
+    "descricao": "Descrição do produto",
+    "preco": 90.55,
+    "imagem": "example09.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 10,
+    "categoria": "corpo e banho",
+    "nota": 2,
+    "nome": "Produto 10",
+    "descricao": "Descrição do produto",
+    "preco": 100.55,
+    "imagem": "example10.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 11,
+    "categoria": "corpo e banho",
+    "nota": 3,
+    "nome": "Produto 11",
+    "descricao": "Descrição do produto",
+    "preco": 110.55,
+    "imagem": "example11.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 12,
+    "categoria": "corpo e banho",
+    "nota": 5,
+    "nome": "Produto 12",
+    "descricao": "Descrição do produto",
+    "preco": 120.55,
+    "imagem": "example12.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 13,
+    "categoria": "make",
+    "nota": 1,
+    "nome": "Produto 13",
+    "descricao": "Descrição do produto",
+    "preco": 130.55,
+    "imagem": "example13.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 14,
+    "categoria": "make",
+    "nota": 2,
+    "nome": "Produto 14",
+    "descricao": "Descrição do produto",
+    "preco": 140.55,
+    "imagem": "example14.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 15,
+    "categoria": "make",
+    "nota": 4,
+    "nome": "Produto 15",
+    "descricao": "Descrição do produto",
+    "preco": 150.55,
+    "imagem": "example15.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 16,
+    "categoria": "make",
+    "nota": 5,
+    "nome": "Produto 16",
+    "descricao": "Descrição do produto",
+    "preco": 160.55,
+    "imagem": "example16.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 17,
+    "categoria": "cabelos",
+    "nota": 1,
+    "nome": "Produto 17",
+    "descricao": "Descrição do produto",
+    "preco": 170.75,
+    "imagem": "example17.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 18,
+    "categoria": "cabelos",
+    "nota": 2,
+    "nome": "Produto 18",
+    "descricao": "Descrição do produto",
+    "preco": 180.75,
+    "imagem": "example18.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 19,
+    "categoria": "cabelos",
+    "nota": 3,
+    "nome": "Produto 19",
+    "descricao": "Descrição do produto",
+    "preco": 190.75,
+    "imagem": "example19.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  },
+  {
+    "codigo": 20,
+    "categoria": "cabelos",
+    "nota": 5,
+    "nome": "Produto 20",
+    "descricao": "Descrição do produto",
+    "preco": 200.75,
+    "imagem": "example20.jpg",
+    "informacao": "Informações gerais a respeito do produto, como composição, uso tamanho, outros."
+  }
+  ]

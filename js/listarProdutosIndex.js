@@ -90,7 +90,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                                 }
                             }
                         } catch (error) {
-                            logMessage('Erro ao atualizar favoritos: ' + error.message);
                         }
                     } else {
                         logMessage('Usuário não logado, para efetuar o login clique <a href="./pages/perfil.html">aqui</a>');
@@ -126,13 +125,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                             });
         
                             if (response.ok) {
-                                logMessage('Produto adicionado às compras com sucesso!');
                                 loggedInUser.compras = comprasAtuais;
                                 localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
                                 window.location.href = './pages/compras.html';
                             }
                         } catch (error) {
-                            logMessage('Erro ao adicionar produto às compras: ' + error.message);
                         }
                     } else {
                         logMessage('Usuário não logado, para efetuar o login clique <a href="./pages/perfil.html">aqui</a>');
@@ -151,7 +148,6 @@ document.addEventListener("DOMContentLoaded", async () => {
           renderProdutos(top4ProdutosPrecoAsc, 'respoPreco');
           
       } catch (error) {
-          logMessage('Erro ao buscar produtos: ' + error.message);
       }
   };
 

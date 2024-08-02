@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             renderPage(produtosFiltrados, currentPage);
             setupPagination(produtosFiltrados);
         } catch (error) {
-            logMessage('Erro ao buscar produtos: ' + error.message);
         }
     };
 
@@ -115,7 +114,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                             }
                         }
                     } catch (error) {
-                        logMessage('Erro ao atualizar favoritos: ' + error.message);
                     }
                 } else {
                     logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');
@@ -151,14 +149,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                         });
 
                         if (response.ok) {
-                            logMessage('Produto adicionado às compras com sucesso!');
                             loggedInUser.compras = comprasAtuais;
                             localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
                             window.location.href = "compras.html";
                         }
                     } catch (error) {
                         window.location.href = "compras.html";
-                        logMessage('Erro ao adicionar produto às compras: ' + error.message);
                     }
                 } else {
                     logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');

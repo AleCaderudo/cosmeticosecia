@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     const favoritosDiv = document.getElementById('favoritos');
     const paginationDiv = document.getElementById('pagination');
 
-    const itemsPerPage = 4; // Número de itens por página
-    let currentPage = 1; // Página inicial
+    const itemsPerPage = 4; 
+    let currentPage = 1; 
     let produtosFavoritos = [];
 
     const logMessage = (message) => {
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async () => {
             try {
                 const responseUser = await fetch(`https://cosmback.vercel.app/clientes/${loggedInUser._id}`);
                 if (!responseUser.ok) {
-                    throw new Error('Erro ao buscar dados do usuário');
+                    throw new Error('');
                 }
                 const userData = await responseUser.json();
                 const favoritos = userData.favoritos || [];
@@ -38,7 +38,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                 renderPage(produtosFavoritos, currentPage);
                 setupPagination(produtosFavoritos);
             } catch (error) {
-                logMessage('Erro ao buscar favoritos: ' + error.message);
             }
         } else {
             logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');
@@ -107,7 +106,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                             fetchFavoritos(); // Recarrega os favoritos
                         }
                     } catch (error) {
-                        logMessage('Erro ao atualizar favoritos: ' + error.message);
                     }
                 } else {
                     logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');
@@ -143,14 +141,12 @@ document.addEventListener("DOMContentLoaded", async () => {
                         });
 
                         if (response.ok) {
-                            logMessage('Produto adicionado às compras com sucesso!');
                             loggedInUser.compras = comprasAtuais;
                             localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
                             window.location.href = "../pages/compras.html";
                         }
                     } catch (error) {
                         window.location.href = "../pages/compras.html";
-                        logMessage('Erro ao adicionar produto às compras: ' + error.message);
                     }
                 } else {
                     

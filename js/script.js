@@ -54,7 +54,6 @@ const camposDoFormulario = document.querySelectorAll('[required]');
             },
             pass: {
                 valueMissing: "O campo senha não pode estar vazio.",
-                patternMismatch: "Por favor, preencha com uma senha válida.",
                 tooShort: "A senha deve ter no mínimo 8 caracteres.",
             },
             endereco: {

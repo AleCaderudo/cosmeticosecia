@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             calcularTotal(produtosComprados);
             salvarContagemLocalStorage(compras.length, favoritos.length);
         } catch (error) {
-            logMessage('Erro ao buscar compras: ' + error.message);
         }
     };
 
@@ -95,7 +94,6 @@ document.addEventListener("DOMContentLoaded", async () => {
                             fetchCompras(); 
                         }
                     } catch (error) {
-                        logMessage('Erro ao atualizar compras: ' + error.message);
                     }
                 } else {
                     logMessage('Usuário não logado, para efetuar o login clique <a href="perfil.html">aqui</a>');

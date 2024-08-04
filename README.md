@@ -4,7 +4,7 @@ Site versão final do treinamento Alura e Grupo o Boticário.<br><br>
 <strong>Objetivo:</strong> Criar um sistema de loja virtual de cosméticos com responsividade e integração do front-end e back-end.<br><br>
 Nele utilizei tecnologia Javascript e banco de dados Mongo Db Atlas, optei por separar a API desse projeto em outro repositório por questão de segurança dos dados nela inseridos. Para acessar a API https://cosmback.vercel.app.<br><br>
 Neste projeto procurei dar ênfase a funcionalidade e integração dos componentes, front-end e back-end em detrimento ao design, já que o treinamento é focado nestes aspectos.<br><br>
-<h1>Implementações e funcionalidades:</h1><br><br>
+<strong>Implementações e funcionalidades:</strong><br><br>
 <strong>Responsividade:</strong> O design e a posição de alguns componentes mudam de acordo com o tamanho da tela. Como por exemplo o menu hamburguer que some ou aparece e o formulário de procura que muda de forma e posição, os ícones superiores bem como seus enunciados também se modificam.<br><br>
 <strong>Interatividade:</strong> Desenvolvi funcionalidades interativas e dinâmicas com JavaScript, como um menu hamburguer, um slide interativo na página inicial e alguns efeitos de mouse no menu principal.<br><br>
 <strong>Interatividade Front-end e Back-end:</strong><br><br>

@@ -22,9 +22,11 @@
 	   
     <section class="formulario">
             <div class="formulario__container">
-                <h2 class="formulario__titulo-texto">Preencha o campo abaixo com seu e-mail para recuperar a senha / Implementar</h2>
+                <h2 class="formulario__titulo-texto">Preencha o campo abaixo com seu e-mail para recuperar a senha</h2>
             </div>
-		<form cmethod="post" class="principal__formulario"  action="./recuperarpassok.html" >
+		<form id="formRecupera" class="principal__formulario" >
+
+            <div id="respo" ></div><br>
 
 			    <fieldset class="formulario__campo">
 				    <label class="campo__etiqueta" for="email">E-mail</label>
@@ -47,6 +49,7 @@
     <footer ></footer>
 
     <script src="../inc/header.js"></script>
+    <script src="../pages/jsf/recuperarpass.js"></script>
     <script src="../inc/footer.js"></script>
     <script src="../js/apps.js"></script>
     <script src="../js/script.js" type="module"></script>

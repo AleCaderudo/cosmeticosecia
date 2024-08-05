@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         if (clienteEncontrado) {
           if (clienteEncontrado.email === email) {
-            localStorage.setItem('loggedInUser', JSON.stringify(clienteEncontrado));
+            localStorage.setItem('emailRecupera', JSON.stringify(clienteEncontrado));
             window.location.href = 'recuperarpassok.html';
           } 
         } else {

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           }
           const produtos = await response.json();
           const lista = document.getElementById('respo');
-          lista.innerHTML = ''; // Limpa a lista antes de adicionar novos produtos
+          lista.innerHTML = ''; 
 
           produtos.forEach(produto => {
               const item = document.createElement('div');
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               event.preventDefault();
               const productId = event.currentTarget.getAttribute('data-product-id');
               await deleteProduto(productId);
-              fetchClientes(); // Recarrega a lista após a exclusão
+              fetchClientes(); 
           });
       });
   };

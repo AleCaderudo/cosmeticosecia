@@ -19,10 +19,4 @@ Na área de login existe 2 campos para autenticação, e-mail e senha. Caso o e-
      Após preenchimento obrigatório dos campos de endereço, (os campos do cartão preferi que não fossem obrigatórios), pode-se clicar novamente em “Finalizar pedido”, acessando a página final da área de compras. Nesta pagina são exibidos uma mensagem de pedido finalizado, o nome do usuário logado o endereço, a forma de pagamento, os produtos adquiridos e o valor total deles.<br><br>
 <strong>Area de administração:</strong> Criei uma área para administrar os produtos do site que pode ser acessada através de um link provisório na página inicial, ou acessando https://cosmeticosecia.vercel.app/admin/ . Ao acessar é exibindo uma área de login e senha (admin , pass), após efetuar o login o administrador é direcionado a uma pagina com opções de “Sair e voltar ao site”, “Listar todos os produtos” e “Restaurar produtos”. Nesta mesma pagina é exibido um formulário para incluir produtos no sistema, com explicações adjuntas do seu funcionamento. Após preencher os campos clicar em “Salvar produto” aparecerá uma nova pagina confirmando e listando os dados do produto cadastrado.<br><br>
 	Ao acessar  “Listar todos os produtos” aparecerá uma lista com todos os produtos cadastrados no banco de dados, junto a cada item aparecerá uma figura de uma lixeira, ao clicar nela o produto será apagado do sistema.
-<<<<<<< HEAD
 Acessando “Restaurar produtos”, o administrador pode restaurar a configuração original dos produtos no sistema clicando em “Restaurar Backup”.<br><br>
-=======
-Acessando “Restaurar produtos”, o administrador pode restaurar a configuração original dos produtos no sistema clicando em “Restaurar Backup”.<br><br>
-
->>>>>>> 408b9661c339d6e09fa62ac92951c8dce5456a7e
->>>>>>> 664f773ffd8420930d63cf9a148766648b559e4c

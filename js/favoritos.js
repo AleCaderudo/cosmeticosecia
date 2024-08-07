@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                         if (response.ok) {
                             loggedInUser.favoritos = favoritosAtuais;
                             localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser));
-                            fetchFavoritos(); // Recarrega os favoritos
+                            fetchFavoritos(); 
                         }
                     } catch (error) {
                     }

@@ -21,7 +21,7 @@ display: flex;
 
 .ordenar_produtos--pai {
 display: inline-block;
-margin: auto;
+margin: 0 30vw 3em 30vw;
 align-items: center;
 }
 
@@ -41,8 +41,8 @@ display: flex;
 }
 
 .card { 
-width: 200px;
-display: block;
+width: 300px;
+display: flex;
 background: var(--branco);
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 border-radius: 10px;
@@ -52,7 +52,7 @@ margin-right: auto;
 }
 
 .card__descrição {
-display: block;
+display: flex;
 justify-content: space-between;
 margin-bottom: 0.5em;
 margin-right: auto;
@@ -127,11 +127,11 @@ display: flex;
 
 .resposta__api {
   justify-content: center;
-  display: flexbox;
+  display: block;
   }
 
 .card {
-  width:auto
+  width: 40%;
   margin: 2em auto;
 }
 }

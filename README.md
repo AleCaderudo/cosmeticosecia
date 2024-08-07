@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # <h2 align="center">Cosmeticosecia</h2>
 
 Site versão final do treinamento Alura e Grupo o Boticário.<br><br>

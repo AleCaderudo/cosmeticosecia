@@ -17,6 +17,7 @@ background-image: linear-gradient(to right, transparent, var(--verde), transpare
 .resposta__api {
 justify-content: center;
 display: flex;
+text-decoration: none;
 }
 
 .ordenar_produtos--pai {

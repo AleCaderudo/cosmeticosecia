@@ -21,9 +21,12 @@ form.addEventListener('submit', (event) => {
 
             if (usuarioEncontrado) {
                 window.location.href = "cadastrarProdutos.html";
-                mensagem.textContent = 'Login realizado com sucesso!';
+                mensagem.textContent = 'Login realizado com sucesso!';                
             } else {
                 mensagem.textContent = 'Usuário ou senha inválidos.';
             }
         });
 });
+
+
+

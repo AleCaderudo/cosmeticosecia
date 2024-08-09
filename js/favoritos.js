@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     let produtosFavoritos = [];
 
     const logMessage = (message) => {
+        logDiv.style.textDecoration = 'none';
         logDiv.innerHTML += message + '\n';
     };
 
@@ -24,8 +25,8 @@ document.addEventListener("DOMContentLoaded", async () => {
                 const favoritos = userData.favoritos || [];
 
                 if (favoritos.length === 0) {
-                    favoritosDiv.innerHTML = '<p>Você não tem produtos favoritos.</p>';
-                    return;
+                    logMessage('<p>Você não tem produtos favoritos.</p>') ;
+                    
                 }
 
                 const responseProdutos = await fetch('https://cosmback.vercel.app/produtos');

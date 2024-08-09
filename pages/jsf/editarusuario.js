@@ -35,7 +35,6 @@ document.getElementById('formCadastro').addEventListener('submit', async (event)
       if (responseAtualizacao.ok) {
           document.getElementById('respo').textContent = 'Dados atualizados com sucesso!';
 
-          // Atualiza o localStorage com os novos dados do usuário manualmente
           const updatedUser = {
               _id: userId,
               email: data.email,

@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const comprasContainer = document.getElementById('compras-container');
     const totalContainer = document.getElementById('total-container'); 
+    const logDiv = document.getElementById('log');
+
 
     const logMessage = (message) => {
-        const logDiv = document.createElement('div');
-        logDiv.innerHTML = message;
-        comprasContainer.appendChild(logDiv);
+        logDiv.innerHTML += message + '\n';
     };
 
     const fetchCompras = async () => {

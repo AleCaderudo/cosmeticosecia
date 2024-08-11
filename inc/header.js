@@ -31,10 +31,10 @@ const inserirHTML = `
         </form>
     </div>
     <div class="container">
-        <a href="../pages/favoritos.html">
-            <img src="../img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente" title="Favoritos">
+        <a class="favLink" href="../pages/favoritos.html" >
+            <img src="../img/Favoritos.svg" alt="Meus favoritos" class="container__imagem container__imagem-transparente" title="Favoritos"><div id="favNum" class="numeroPeqFav"></div>
         </a>
-        <a href="../pages/compras.html" class="container__link">
+        <a href="../pages/compras.html" id="sacola" class="container__link">
             <img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras">
             <p class="container__texto">Minhas compras</p>
         </a>&emsp;&emsp;
@@ -73,11 +73,28 @@ inserirCodigo();
 
 const userNameElement = document.getElementById('user-name');
 const userDadosElement = document.getElementById('dadosLogin');
+const userSacola = document.getElementById('sacola');
+const userFav = document.getElementById('favNum');
+
+
 
 let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
+const numeroCompra = loggedInUser.compras;
+const countCompra = numeroCompra.length;
+
+const numeroFav = loggedInUser.favoritos;
+const countFavoritos = numeroFav.length;
+
+
+
 if (loggedInUser) {
     userDadosElement.innerHTML = `<a class="container__texto-link" href="../pages/perfilok.html">Olá ${loggedInUser.nome} `;
+    userFav.innerHTML = ` <div  class="numeroPeq">${countFavoritos}</div> `;
+
+    userSacola.innerHTML = ` <a href="../pages/compras.html" id="sacola" class="container__link">
+    <img src="../img/Compras.svg"  alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras"><div class="numeroPeq">${countCompra}</div>
+    <p class="container__texto">Minhas compras</p></a> `;
     userNameElement.innerHTML = `<div class="formulario__container">Olá ${loggedInUser.nome} <br><br> Você esta logado no sistema com o e-mail: ${loggedInUser.email}<br><br>
     Caso não seja você, ou deseja se desconectar do site clique <a class="mensagem__user-log" href="#" id="logout-button">aqui</a><br><br>
     Caso queira editar seus dados clique <a class="mensagem__user-log" href="../pages/editarusuario.html">aqui</a></div>`;
@@ -97,6 +114,6 @@ if (logoutButton) {
 
         window.location.href = '../pages/perfil.html';
     });
-}
+};
 
 

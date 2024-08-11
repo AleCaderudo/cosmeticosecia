@@ -79,3 +79,4 @@ function SidebarSelection(item) {
          }
         timeoutId = setTimeout(showSlides, 5000); // Tempo de troca da imagem 5 segundos
           }
+

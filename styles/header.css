@@ -12,7 +12,7 @@
 .container {
     display: flex;
     align-items: center;
-	
+    	
 }
 
 .container__imagem {
@@ -101,11 +101,37 @@
             vertical-align: middle;
         }
  
+.numeroPeq {
+    color: red;
+    position: flex;
+    margin-left: -8%;
+    width: 25px;
+    height: 8px;
+    right: 300px;
+}
+
+.numeroPeqFav {
+    color: red;
+    position: flex;
+    margin-left: 95%;
+    width: 25px;
+    height: 5px;
+    right: 300px;
+    text-decoration: none;
+}
+
+.favLink {
+    text-decoration: none;
+}
             
 @media screen and (min-width: 1024px) {
 
 	.form-container2 {
 	display: none;
+}
+
+.numeroPeqFav {
+    display: none;
 }
 	
 .container__imagem {

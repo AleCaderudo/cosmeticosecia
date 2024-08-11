@@ -113,11 +113,9 @@
 .numeroPeqFav {
     color: red;
     position: flex;
-    margin-left: 95%;
+    margin-left: 5%;
     width: 25px;
-    height: 5px;
-    right: 300px;
-    text-decoration: none;
+    height: 8px;
 }
 
 .favLink {

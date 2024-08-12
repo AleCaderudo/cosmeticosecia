@@ -117,6 +117,10 @@ document.addEventListener('DOMContentLoaded', async function () {
 
                 if (response.ok) {
                     console.log('Compras deletadas com sucesso.');
+                    dadosUser.compras = [];
+                    localStorage.setItem('loggedInUser', JSON.stringify(dadosUser));
+                    localStorage.removeItem('pedido');
+                                        
                 } else {
                     console.error('Erro ao deletar compras:', response.statusText);
                 }

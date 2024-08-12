@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             renderCompras(produtosComprados);
             calcularTotal(produtosComprados);
-            salvarContagemLocalStorage(compras.length, favoritos.length);
         } catch (error) {
         }
     };
@@ -115,14 +114,6 @@ document.addEventListener("DOMContentLoaded", async () => {
             event.preventDefault();
             window.location.href = 'finalizarpedido.html';
         });
-    };
-
-    const salvarContagemLocalStorage = (contagemCompras, contagemFavoritos) => {
-        const contagens = {
-            compras: contagemCompras,
-            favoritos: contagemFavoritos
-        };
-        localStorage.setItem("contagens", JSON.stringify(contagens));
     };
 
     fetchCompras();

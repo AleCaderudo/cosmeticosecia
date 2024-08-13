@@ -56,7 +56,7 @@ const inserirHTML = `
         <a href="../pages/perfumaria.html" class="link__banner">Perfumaria</a>&emsp;
         <a href="../pages/corpoebanho.html" class="link__banner">Corpo e Banho</a>&emsp;
         <a href="../pages/make.html" class="link__banner">Make</a>&emsp;
-        <a href="../pages/cabelos.html" class="link__banner">Cabelos</a>&emsp;
+        <a href="../pages/cabelos.html" class="link__banner">Cabelos</a> - 
         <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Meus Favoritos</a>&emsp;
     </div>
 </section>
@@ -92,9 +92,16 @@ const numeroFav = loggedInUser.favoritos;
 const countFavoritos = numeroFav.length;
 const numeroFavMenu = loggedInUser.favoritos;
 const countFavoritosMenu = numeroFavMenu.length;
+
+if (countFavoritosMenu === 1) {
+    var plural = '' ;
+} else {
+    var plural = 's';
+};
+
 if (countFavoritos != 0) {
         userFav.innerHTML = ` <div  class="numeroPeq">${countFavoritos}</div> `;
-        userFavMenu.innerHTML = ` <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Meus Favoritos ${countFavoritosMenu} </a>`;
+        userFavMenu.innerHTML = ` <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Você possui ${countFavoritosMenu} produto${plural} favorito${plural}  </a>`;
 
 }
 

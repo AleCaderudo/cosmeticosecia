@@ -90,9 +90,11 @@ if (countCompra != 0) {
 
 const numeroFav = loggedInUser.favoritos;
 const countFavoritos = numeroFav.length;
+const numeroFavMenu = loggedInUser.favoritos;
+const countFavoritosMenu = numeroFavMenu.length;
 if (countFavoritos != 0) {
-        userFav.innerHTML = ` <div  class="numeroPeq">${countFavoritos}${countFavoritos}</div> `;
-        userFavMenu.innerHTML = ` <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Meus Favoritos ${countFavoritos} </a>`;
+        userFav.innerHTML = ` <div  class="numeroPeq">${countFavoritos}</div> `;
+        userFavMenu.innerHTML = ` <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Meus Favoritos ${countFavoritosMenu} </a>`;
 
 }
 

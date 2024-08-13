@@ -18,7 +18,7 @@
 .container__imagem {
     padding: 1em;
 	width: 30px;
-	margin-left: 4em;
+	margin-left: 2em;
 }
 
 .container__texto {
@@ -37,7 +37,7 @@
 .container__titulo, .container__titulo--negrito {
         font-family: var(--fonte-secundario);
         font-size: 23px;
-		margin-left: 60px;
+		margin-left: 10px;
     }
 
 .container__titulo {

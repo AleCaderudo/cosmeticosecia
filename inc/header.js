@@ -57,7 +57,7 @@ const inserirHTML = `
         <a href="../pages/corpoebanho.html" class="link__banner">Corpo e Banho</a>&emsp;
         <a href="../pages/make.html" class="link__banner">Make</a>&emsp;
         <a href="../pages/cabelos.html" class="link__banner">Cabelos</a>&emsp;
-        <a href="../pages/favoritos.html" class="link__banner">Meus Favoritos</a>&emsp;
+        <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Meus Favoritos</a>&emsp;
     </div>
 </section>
 `;
@@ -75,8 +75,7 @@ const userNameElement = document.getElementById('user-name');
 const userDadosElement = document.getElementById('dadosLogin');
 const userSacola = document.getElementById('sacola');
 const userFav = document.getElementById('favNum');
-
-
+const userFavMenu = document.getElementById('favNumMenu')
 
 let loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
@@ -93,6 +92,8 @@ const numeroFav = loggedInUser.favoritos;
 const countFavoritos = numeroFav.length;
 if (countFavoritos != 0) {
         userFav.innerHTML = ` <div  class="numeroPeq">${countFavoritos}</div> `;
+        userFavMenu.innerHTML = ` <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Meus Favoritos ${countFavoritos} </a>`;
+
 }
 
 

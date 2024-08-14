@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", async () => {
     let currentPage = 1; 
-    const itemsPerPage = 15; // Itens por página
+    const itemsPerPage = 15;
 
     const fetchClientes = async () => {
         try {
@@ -17,26 +17,42 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             const logsToDisplay = logs.slice(startIndex, endIndex);
 
-            logsToDisplay.forEach(log => {
+            for (const log of logsToDisplay) {
+                const localizacao = await obterLocalizacaoGeografica(log.ip);
+                
                 const item = document.createElement('div');
                 item.classList.add('product-item');
                 item.innerHTML = `
                     <strong>IP:</strong> ${log.ip} - 
                     <strong>Pagina:</strong> ${log.pag} - 
                     <strong>Data:</strong> ${log.data} - 
-                    <strong>Local:</strong> ${log.nav} - 
+                    <strong>Local:</strong> ${localizacao} - 
                     <button class="lixeira__compras" title="Clique aqui para remover registro" data-product-id="${log._id}">
                         <img src="lixeira1.svg" alt="Apagar Registro">
                     </button>
                     <br><br>
                 `;
                 lista.appendChild(item);
-            });
+            }
 
             addDeleteEventListeners();
             updatePagination(logs.length); 
         } catch (error) {
             console.error('Erro ao buscar produtos:', error);
+        }
+    };
+
+    const obterLocalizacaoGeografica = async (ip) => {
+        try {
+            const response = await fetch(`http://ip-api.com/json/${ip}?fields=city,region,country`);
+            if (!response.ok) {
+                throw new Error('Erro ao obter a localização');
+            }
+            const data = await response.json();
+            return `${data.country} - ${data.region} - ${data.city} `;
+        } catch (error) {
+            console.error('Erro ao obter localização geográfica:', error);
+            return 'Localização desconhecida';
         }
     };
 

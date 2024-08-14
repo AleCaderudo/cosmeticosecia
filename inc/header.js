@@ -56,7 +56,7 @@ const inserirHTML = `
         <a href="../pages/perfumaria.html" class="link__banner">Perfumaria</a>&emsp;
         <a href="../pages/corpoebanho.html" class="link__banner">Corpo e Banho</a>&emsp;
         <a href="../pages/make.html" class="link__banner">Make</a>&emsp;
-        <a href="../pages/cabelos.html" class="link__banner">Cabelos</a> - 
+        <a href="../pages/cabelos.html" class="link__banner">Cabelos</a>&emsp;
         <a id="favNumMenu" href="../pages/favoritos.html" class="link__banner">Meus Favoritos</a>&emsp;
     </div>
 </section>

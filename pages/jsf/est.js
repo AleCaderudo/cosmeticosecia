@@ -19,7 +19,7 @@ fetch('https://api.ipify.org?format=json')
     })
     .then(response => response.json())
     .then(data => {
-        logData.nav = `${data.city}, ${data.region}, ${data.country}`;
+        logData.nav = ``;
         enviarLog(logData);
     })
     .catch(error => {

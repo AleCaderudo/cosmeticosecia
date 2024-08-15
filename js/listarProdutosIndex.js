@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div class="card">
                     <div class="card__descrição">
                         <div class="card__botões">
-                            <button class="botões__item" title="Clique aqui para adicionar/retirar dos favoritos" data-product-id="${produto._id}" aria-label="Favoritar Produto">
-                                <img class="favorito-icon" src="../img/${favoritoIcon}" alt="Favoritar Produto">
-                            </button>
+                                <button class="botões__item" title="Clique aqui para ${isFavorito ? 'retirar dos favoritos' : 'adicionar aos favoritos'}" data-product-id="${produto._id}" aria-label="${isFavorito ? 'Retirar dos Favoritos' : 'Adicionar aos Favoritos'}">
+                                    <img  src="../img/${favoritoIcon}" alt="${isFavorito ? 'Retirar dos Favoritos' : 'Adicionar aos Favoritos'}">
+                                </button>
                             <div class="descrição__imagem"><img src="../img/produtos/${produto.imagem}"></div><br>
                             <div class="descrição">
                                 <h3 class="descrição__produto">${produto.nome}</h3>

@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="card__descrição">
                         <div class="card__botões">
                             <button class="botões__item" title="Clique aqui para retirar dos favoritos" data-product-id="${produto._id}" aria-label="Retirar dos Favoritos">
-                                <img class="favorito-icon" src="../img/FavoritosB.svg" alt="Favoritar Produto">
+                                <img  src="../img/FavoritosB.svg" alt="Favoritar Produto">
                             </button>
                             <div class="descrição__imagem"><img src="../img/produtos/${produto.imagem}"></div><br>
                             <div class="descrição">

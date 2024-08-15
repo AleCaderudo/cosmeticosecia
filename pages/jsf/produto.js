@@ -26,19 +26,26 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <div class="card_prod">
                         <div class="card__descrição_prod">
                             <div class="card__botões">
-                            
-                             <h3 class="corpo__titulo">${produto.nome}</h3>
+                            <div class="container_botao_prod">
                                 <button class="botões__item" title="Clique aqui para ${isFavorito ? 'retirar dos favoritos' : 'adicionar aos favoritos'}" data-product-id="${produto._id}" aria-label="${isFavorito ? 'Retirar dos Favoritos' : 'Adicionar aos Favoritos'}">
                                     <img  src="../img/${favoritoIcon}" alt="${isFavorito ? 'Retirar dos Favoritos' : 'Adicionar aos Favoritos'}">
                                 </button>
-                                <div class="descrição__imagem"><img src="../img/produtos/${produto.imagem}" ></div><br>
-                                <div class="descrição">
-                                    <h2 class="descrição__produto-01">${produto.descricao}</h2>
-                                    <img title="Produto nota ${produto.nota} na avaliação" src="../img/Estrelinhas${produto.nota}.svg" alt="${produto.nota}"><br><br>
-                                    <h1 class="preço">R$ ${produto.preco}</h1><br>
-                                    <p class="descrição__texto">${produto.informacao}</p><br><br>
-                                    <div class="comprar_prod"><a href="#" class="comprar" data-product-id="${produto._id}">Comprar</a></div>
+                             </div>   
+                             <h3 class="corpo__titulo_prod">${produto.nome}</h3>
+
+                             
+
+                                <div class="descrição_prod">
+                                <div class="descrição__imagem_prod"><img src="../img/produtos/${produto.imagem}" ></div><br>
+                                   <div class="conteiner_conteudo">  
+                                    <h1 class="descrição__produto-01_prod">${produto.descricao}</h1><br>
+                                    <h3 class="descrição__produto-01">Avaliação do produto: <br><br><img title="Produto nota ${produto.nota} na avaliação" src="../img/Estrelinhas${produto.nota}.svg" alt="${produto.nota}"></h3><br><br>
+                                    <h1 class="preço">Preço : R$ ${produto.preco}</h1><br>
+                                    <p class="descrição__texto_prod">${produto.informacao}</p><br><br>
+                                   </div> 
                                 </div>
+                                    <div class="comprar_prod"><a href="#" class="comprar" data-product-id="${produto._id}">Comprar</a></div>
+                                
                             </div>
                         </div>
                     </div>

@@ -34,12 +34,12 @@ const inserirHTML = `
         <a class="container__link" href="../pages/favoritos.html" >
             <img src="../img/Favoritos.svg" alt="Meus favoritos" class="container__imagem-transparente" title="Favoritos"><div id="favNum" class="numeroPeqFav"></div>
         </a>
-        <a href="../pages/compras.html" id="sacola" class="container__link">
-            <img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" title="Sacola de compras">
+        <a href="../pages/compras.html" id="sacola" class="container__link" title="Clique aqui para acessar suas compras">
+            <img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" >
             <p class="container__texto">Minhas compras</p>
         </a>&emsp;&emsp;
         <div id="dadosLogin">
-            <a href="../pages/perfil.html" class="container__link"><img src="../img/Usuario.svg" alt="Meu perfil" class="container__imagem" title="Meu Perfil"><p class="container__texto">Meu perfil</p></a>
+            <a href="../pages/perfil.html" class="container__link" title="Clique aqui para acessar o seu perfil"><img src="../img/Usuario.svg" alt="Clique aqui para acessar o seu perfil" class="container__imagem" ><p class="container__texto">Meu perfil</p></a>
         </div>
     </div>
 </header>
@@ -107,7 +107,7 @@ if (countFavoritos != 0) {
 
 
 if (loggedInUser) {
-    userDadosElement.innerHTML = `<a class="container__texto-link" href="../pages/perfilok.html">Olá ${loggedInUser.nome} `;    
+    userDadosElement.innerHTML = `<a class="container__texto-link" href="../pages/perfilok.html" title="Clique aqui para gerenciar seus dados">Olá ${loggedInUser.nome} `;    
     userNameElement.innerHTML = `<div class="formulario__container">Olá ${loggedInUser.nome} <br><br> Você esta logado no sistema com o e-mail: ${loggedInUser.email}<br><br>
     Caso não seja você, ou deseja se desconectar do site clique <a class="mensagem__user-log" href="#" id="logout-button">aqui</a><br><br>
     Caso queira editar seus dados clique <a class="mensagem__user-log" href="../pages/editarusuario.html">aqui</a></div>`;

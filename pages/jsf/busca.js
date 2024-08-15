@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                                     <img title="Produto nota ${produto.nota} na avaliação" src="../img/Estrelinhas${produto.nota}.svg" alt="${produto.nota}"><br><br>
                                     <h1 class="preço">R$ ${produto.preco}</h1><br>
                                     <p class="descrição__texto">${produto.informacao}</p><br><br>
-                                    <a href="#" class="comprar" data-product-id="${produto._id}">Comprar</a>
+                                    <a href="#" class="comprar" data-product-id="${produto._id}" title="Clique aqui para comprar">Comprar</a>
                                 </div>
                             </div>
                         </div>

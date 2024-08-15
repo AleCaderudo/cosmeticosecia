@@ -23,14 +23,12 @@ text-decoration: none;
 }
 
 .ordenar_produtos--pai {
-display: inline-block;
-margin: auto;
-align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.ordenar_produtos {
- display: block;
-}
+
 .mensagem__user-log {
     margin: 1em 0;
     font-weight: 600;
@@ -101,6 +99,10 @@ font-weight: 700;
 text-decoration: none;
 }
 
+.comprar:hover {
+  color: white;
+}
+
 .link__aviso {
 text-align: center;
 text-decoration: none;
@@ -128,6 +130,12 @@ display: flex;
   justify-content: center;
   display: flexbox;
   }
+
+  .ordenar_produtos--pai {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    }
 
 .card {
   width:auto

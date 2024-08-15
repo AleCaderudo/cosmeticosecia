@@ -33,9 +33,17 @@
     height: 8px;
   }
   .descrição__imagem_prod {
-    width: 260px;
-    height: 240px;
+    width: 270px;
   }
+  .descrição__imagem_prod_tamanho {
+    width: 270px;
+    height: 290px;
+  }
+
+.titulo_avalia__produto {
+  font-size: 18px;
+}
+
   .comprar_prod {
     display: flex;
     justify-content: center;
@@ -58,7 +66,7 @@
 }
 .descrição__produto-01_prod {
     color: var(--preto);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     margin: 0.5em 0;
     }

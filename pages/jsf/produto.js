@@ -36,15 +36,16 @@ document.addEventListener("DOMContentLoaded", async () => {
                              
 
                                 <div class="descrição_prod">
-                                <div class="descrição__imagem_prod"><img src="../img/produtos/${produto.imagem}" ></div><br>
+                                <div class="descrição__imagem_prod"><img src="../img/produtos/${produto.imagem}" class="descrição__imagem_prod_tamanho"></div><br>
                                    <div class="conteiner_conteudo">  
                                     <h1 class="descrição__produto-01_prod">${produto.descricao}</h1><br>
-                                    <h3 class="descrição__produto-01">Avaliação do produto: <br><br><img title="Produto nota ${produto.nota} na avaliação" src="../img/Estrelinhas${produto.nota}.svg" alt="${produto.nota}"></h3><br><br>
+                                    <h3 class="titulo_avalia__produto">Avaliação do produto: <br>
+                                    <img title="Produto nota ${produto.nota} na avaliação" src="../img/Estrelinhas${produto.nota}.svg" alt="${produto.nota}" style="  width: 200px; height: 50px;"></h3><br><br>
                                     <h1 class="preço">Preço : R$ ${produto.preco}</h1><br>
                                     <p class="descrição__texto_prod">${produto.informacao}</p><br><br>
                                    </div> 
                                 </div>
-                                    <div class="comprar_prod"><a href="#" class="comprar" data-product-id="${produto._id}">Comprar</a></div>
+                                    <div class="comprar_prod" title="Clique aqui para comprar"><a href="#" class="comprar" data-product-id="${produto._id}">Comprar</a></div>
                                 
                             </div>
                         </div>

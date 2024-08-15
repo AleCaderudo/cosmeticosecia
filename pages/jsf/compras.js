@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const calcularTotal = (produtos) => {
         const total = produtos.reduce((acc, produto) => acc + produto.preco, 0);
         totalContainer.innerHTML = `
-        <div style="color: red;">Obs: como se tratam de produtos fictícios, e também de um projeto de aprendizado,
+        <div class="mensagem_aviso" >Obs: como se tratam de produtos fictícios, e também de um projeto de aprendizado,
         não implementei o cálculo do frete. Imagina-se que os produtos tenham o frete grátis ou agregados ao valor dos mesmos.</div>
         Total: R$ ${total.toFixed(2)}
         <button type="submit" class="formulario__botao" id="enviar" >Finalizar pedido</button>

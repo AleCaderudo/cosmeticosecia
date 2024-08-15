@@ -1,17 +1,25 @@
 .card__compras {
-    width: 700px;
+    position:relative;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center; 
+    flex-wrap: wrap;
+    justify-content: center;
+    width: auto;
     background: var(--branco);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-bottom: 10px;
     padding: 1em;
     display: inline-flex;
-    margin: flex;
-
+    margin: 0 auto;
 }
 
 .ordenar_produtos--pai__compras {
     flex-direction: column;
+    align-items: center;
     display: block;
     margin: 0 30vw 3em 30vw;
     align-items: center;
@@ -19,6 +27,8 @@
 
 .ordenar_produtos__compras {
     display: block;
+    align-items: center;
+
 }
 
 .fonte__compras {
@@ -38,4 +48,9 @@
 
 .lixeira__compras {
     background-color: white;
+}
+
+.mensagem_aviso {
+    color: red;
+    
 }

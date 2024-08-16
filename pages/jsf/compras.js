@@ -47,11 +47,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         comprasContainer.innerHTML = '';
         produtos.forEach(produto => {
             comprasContainer.innerHTML += `
+            <div class="centralizar_compras">
                 <div class="card__compras">
                     <img class="img__compras" src="../img/produtos/${produto.imagem}">
                     <div class="fonte__compras"><strong>Nome:</strong> ${produto.nome} - <strong> Preço:</strong> R$ ${produto.preco}</div>
                     <button class="lixeira__compras" title="Clique aqui para remover produto" data-product-id="${produto._id}"><img src="../img/lixeira.svg" alt="Apagar Produto"></button>
-                </div>
+                </div></div><br><br>
             `;
         });
         addDeleteEventListeners();
@@ -105,9 +106,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         const total = produtos.reduce((acc, produto) => acc + produto.preco, 0);
         totalContainer.innerHTML = `
         <div class="mensagem_aviso" >Obs: como se tratam de produtos fictícios, e também de um projeto de aprendizado,
-        não implementei o cálculo do frete. Imagina-se que os produtos tenham o frete grátis ou agregados ao valor dos mesmos.</div>
+        não implementei o cálculo do frete. Imagina-se que os produtos tenham o frete grátis ou agregados ao valor dos mesmos.</div><br>
         Total: R$ ${total.toFixed(2)}
-        <button type="submit" class="formulario__botao" id="enviar" >Finalizar pedido</button>
+        <button type="submit" class="formulario__botao" id="enviar" title="Clique aqui para finalizar o pedido">Finalizar pedido</button>
         `;
 
         document.getElementById('enviar').addEventListener('click', (event) => {

@@ -146,12 +146,6 @@ display: flex;
 
 @media screen and (min-width: 1728px) {
 
-.ordenar_produtos--pai {
-display: inline-flex;
-margin: 0 20vw 3em 20vw;
-align-items: center;
-}
-
 .ordenar_produtos {
 display: flex;
 }

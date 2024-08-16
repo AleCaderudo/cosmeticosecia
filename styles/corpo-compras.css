@@ -1,8 +1,11 @@
+.centralizar_compras {
+    display: flex;
+    justify-content: center
+}
+
+
 .card__compras {
     position:relative;
-    top: 40px;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     align-items: center; 
     flex-wrap: wrap;
@@ -21,8 +24,7 @@
     flex-direction: column;
     align-items: center;
     display: block;
-    margin: 0 30vw 3em 30vw;
-    align-items: center;
+    margin: 0 30vw 5em 30vw;
 }
 
 .ordenar_produtos__compras {

@@ -3,7 +3,6 @@
     justify-content: center
 }
 
-
 .card__compras {
     position:relative;
     display: flex;
@@ -30,7 +29,6 @@
 .ordenar_produtos__compras {
     display: block;
     align-items: center;
-
 }
 
 .fonte__compras {

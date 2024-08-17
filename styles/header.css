@@ -12,13 +12,20 @@
 .container {
     display: flex;
     align-items: center;
-    	
+   	
+}
+
+.container__imagem_logo {
+    padding: 1em;
+	width: 30px;
+	margin-left: 2em;
 }
 
 .container__imagem {
     padding: 1em;
 	width: 30px;
-	margin-left: 2em;
+	margin-left: 1px;
+    margin-right: 1px;
 }
 
 .container__texto {
@@ -36,8 +43,8 @@
 
 .container__titulo, .container__titulo--negrito {
         font-family: var(--fonte-secundario);
-        font-size: 23px;
-		margin-left: 10px;
+        font-size: 18px;
+		margin-left: 5px;
     }
 
 .container__titulo {

@@ -17,7 +17,7 @@ const inserirHTML = `
             </ul>
         </div>
 
-        <a href="../index.html"><img src="../img/logo.jpeg" class="container__imagem" title="Cosméticos $ Cia"></a>
+        <a href="../index.html"><img src="../img/logo.jpeg" class="container__imagem_logo" title="Cosméticos $ Cia"></a>
         <div class="titulo__alinhado">
             <a href="../index.html" class="container__link" title="Cosméticos $ Cia"><h1 class="container__titulo"><b class="container__titulo--negrito">Cosméticos</b> & Cia</h1></a>
         </div>
@@ -37,7 +37,7 @@ const inserirHTML = `
         <a href="../pages/compras.html" id="sacola" class="container__link" title="Clique aqui para acessar suas compras">
             <img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" >
             <p class="container__texto">Minhas compras</p>
-        </a>&emsp;&emsp;
+        </a>&emsp;
         <div id="dadosLogin">
             <a href="../pages/perfil.html" class="container__link" title="Clique aqui para acessar o seu perfil"><img src="../img/Usuario.svg" alt="Clique aqui para acessar o seu perfil" class="container__imagem" ><p class="container__texto">Meu perfil</p></a>
         </div>

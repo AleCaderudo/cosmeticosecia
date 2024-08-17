@@ -31,15 +31,15 @@ const inserirHTML = `
         </form>
     </div>
     <div class="container">
-        <a class="container__link" href="../pages/favoritos.html" >
-            <img src="../img/Favoritos.svg" alt="Meus favoritos" class="container__imagem-transparente" title="Favoritos"><div id="favNum" class="numeroPeqFav"></div>
+        <a class="container__link-favoritos" href="../pages/favoritos.html" >
+            <img src="../img/Favoritos.svg" alt="Meus favoritos" class="container__imagem-favoritos" title="Favoritos"><div id="favNum" class="numeroPeqFav"></div>
         </a>
-        <a href="../pages/compras.html" id="sacola" class="container__link" title="Clique aqui para acessar suas compras">
+        <a href="../pages/compras.html" id="sacola" class="container__link-compras" title="Clique aqui para acessar suas compras">
             <img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" >
             <p class="container__texto">Minhas compras</p>
         </a>&emsp;
         <div id="dadosLogin">
-            <a href="../pages/perfil.html" class="container__link" title="Clique aqui para acessar o seu perfil"><img src="../img/Usuario.svg" alt="Clique aqui para acessar o seu perfil" class="container__imagem" ><p class="container__texto">Meu perfil</p></a>
+            <a href="../pages/perfil.html" class="container__link-perfil" title="Clique aqui para acessar o seu perfil"><img src="../img/Usuario.svg" alt="Clique aqui para acessar o seu perfil" class="container__imagem" ><p class="container__texto">Meu perfil</p></a>
         </div>
     </div>
 </header>

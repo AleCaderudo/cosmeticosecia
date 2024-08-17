@@ -2,7 +2,7 @@
 
 <p align="center">https://cosmeticosecia.vercel.app/</p>
 
-Site versão final do treinamento Alura e Grupo o Boticário.<br><br>
+Site versão final do treinamento Alura e Desenvolve 2024.<br><br>
 <strong>Objetivo:</strong> Criar um sistema de loja virtual de cosméticos com responsividade e integração do front-end e back-end.<br><br>
 Nele utilizei tecnologia Javascript e banco de dados Mongo Db Atlas, optei por separar a API desse projeto em outro repositório por questão de segurança dos dados nela inseridos. Para acessar a API https://cosmback.vercel.app.<br><br>
 Neste projeto procurei dar ênfase a funcionalidade e integração dos componentes, front-end e back-end em detrimento ao design, já que o treinamento é focado nestes aspectos.<br><br>

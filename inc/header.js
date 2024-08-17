@@ -37,7 +37,7 @@ const inserirHTML = `
         <a href="../pages/compras.html" id="sacola" class="container__link-compras" title="Clique aqui para acessar suas compras">
             <img src="../img/Compras.svg" alt="Carrinhos de compras" class="container__imagem" >
             <p class="container__texto">Minhas compras</p>
-        </a>&emsp;
+        </a>
         <div id="dadosLogin">
             <a href="../pages/perfil.html" class="container__link-perfil" title="Clique aqui para acessar o seu perfil"><img src="../img/Usuario.svg" alt="Clique aqui para acessar o seu perfil" class="container__imagem" ><p class="container__texto">Meu perfil</p></a>
         </div>

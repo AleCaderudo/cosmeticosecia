@@ -269,4 +269,10 @@ img {
         display: flex;
         text-decoration: none;
     }
+
+    .container__texto-link {
+        display: flex;
+        margin-left: 20px;
+        text-decoration: none;
+    }   
 }

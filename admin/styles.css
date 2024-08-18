@@ -80,7 +80,6 @@ body {
   }
   
   .product-item {
-   
     align-items: center;
     justify-content: space-between;
   }
@@ -98,6 +97,13 @@ body {
     width: 50%;
 }
 .menu__admin {
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aviso_zerar {
+  font-size: 20px;
   width: 50%;
+  color: red;
 }

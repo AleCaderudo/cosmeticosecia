@@ -39,7 +39,7 @@ const inserirHTML = `
             <p class="container__texto">Minhas compras</p>
         </a>
         <div id="dadosLogin">
-            <a href="../pages/perfil.html" class="container__link-perfil" title="Clique aqui para acessar o seu perfil"><img src="../img/Usuario.svg" alt="Clique aqui para acessar o seu perfil" class="container__imagem" ><p class="container__texto">Meu perfil</p></a>
+            <a href="../pages/perfil.html" class="container__link" title="Clique aqui para acessar o seu perfil"><img src="../img/Usuario.svg" alt="Clique aqui para acessar o seu perfil" class="container__imagem" ><p class="container__texto">Meu perfil</p></a>
         </div>
     </div>
 </header>

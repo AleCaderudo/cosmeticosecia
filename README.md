@@ -23,3 +23,15 @@ Na área de login existe 2 campos para autenticação, e-mail e senha. Caso o e-
 <strong>Area de administração:</strong> Criei uma área para administrar os produtos do site que pode ser acessada através de um link provisório na página inicial, ou acessando https://cosmeticosecia.vercel.app/admin/ . Ao acessar é exibindo uma área de login e senha (admin , pass), após efetuar o login o administrador é direcionado a uma pagina com opções de “Sair e voltar ao site”, “Listar todos os produtos” e “Restaurar produtos”. Nesta mesma pagina é exibido um formulário para incluir produtos no sistema, com explicações adjuntas do seu funcionamento. Após preencher os campos clicar em “Salvar produto” aparecerá uma nova pagina confirmando e listando os dados do produto cadastrado.<br><br>
 	Ao acessar  “Listar todos os produtos” aparecerá uma lista com todos os produtos cadastrados no banco de dados, junto a cada item aparecerá uma figura de uma lixeira, ao clicar nela o produto será apagado do sistema.
 Acessando “Restaurar produtos”, o administrador pode restaurar a configuração original dos produtos no sistema clicando em “Restaurar Backup”.<br><br>
+## Tecnologias
+<div>
+  <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/Javascript-239120?&style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/MongoDB-239120?&style=for-the-badge&logo=css3&logoColor=white">
+  </div>
+
+# Eu mesmo
+
+[<img loading="lazy" src="https://avatars.githubusercontent.com/u/139296557?v=4" width=115><br><sub>Carlos Alexandre da Motta</sub>](http://www.mhps.com.br)
+
